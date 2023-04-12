@@ -161,3 +161,7 @@ function googleTranslateElementInit() {
 $(function(){
     $("#feature").load("index.html"); 
   });
+
+
+  //slider is here
+  
