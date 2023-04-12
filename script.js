@@ -157,3 +157,7 @@ function darkmode() {
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 }
+
+$(function(){
+    $("#feature").load("index.html"); 
+  });
