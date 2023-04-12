@@ -1,3 +1,11 @@
+/* color plate code is here
+000000 black
+14213D nav blue
+FCA311 warning color
+E5E5E5 dark brown
+FFFFFF white color
+*/
+
 * {
     font-family: sans-serif;
 }
@@ -220,7 +228,7 @@ body {
     color: #fff;
     font-size: 18px;
     font-family: "Circular Std Medium";
-    background: goldenrod;
+    background: #FCA311;
     padding: 14px 33px;
     display: inline-block;
     border-radius: 50px;
@@ -403,6 +411,9 @@ body {
      .firstslide{
         margin-top: 0px;
       }
+      .company_daat{
+        padding-top: 20px;
+      }
 }
 
 /* -----back to top code is here ------------------ */
@@ -439,7 +450,7 @@ body {
     content: '';
     height: 100%;
     width: 100%;
-    background: tomato;
+    background: #FCA311;
     border-radius: 100%;
     animation-name: ripple;
     animation-duration: 3s;
@@ -465,8 +476,89 @@ body {
 
   
   .dark-mode {
-    background-color: black;
+    background-color: rgb(133, 133, 130);
     color: white;
   }
 
   /* -----dark mode is closed here -------- */
+/* ----new footer css is here -------------- */
+.footer_start{
+    font-size: 60px;
+    line-height: 5rem;
+    font-family: sans-serif;
+}
+.btn_footer_started{
+    padding: 15px 30px 15px 30px;
+    background-color: #FCA311;
+    color: #14213D;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: -32px;
+    border-radius: 0px 8px 8px 0px ;
+}
+.footer_from{
+    padding: 15px 30px 15px 30px;
+    font-size: 20px;
+}
+.site_foot{
+    color: white;
+    font-size: 22px;
+    font-family: sans-serif;
+}
+.site_foot a{
+    text-decoration: none;
+    color: white;
+}
+.shop_ftt a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    padding-top: 15px;
+    border: 0px solid red;
+    position: relative;
+    top: 5px;
+}
+.icon_footer:hover {
+    color:#FCA311 ;
+    
+}
+.shop_ftt img{
+    width: 30px;
+    height: 40px;
+}
+.shop_ftt_email a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    padding-top: 15px;
+    border: 0px solid red;
+    position: relative;
+    top: 5px;
+    left: 33px;
+}
+.find_store{
+background-color: #FCA311;
+color: #14213D;
+padding: 15px 40px;
+border: none;
+font-size: 18px;
+font-weight: 500;
+}
+.nav_foot_border{
+    border-top: 1px solid lightcyan;
+}
+.goog-te-gadget {
+font-size: 20px !important; 
+}
+.goog-te-combo, .VIpgJd-ZVi9od-ORHb *, .VIpgJd-ZVi9od-SmfZ *, .VIpgJd-ZVi9od-xl07Ob *, .VIpgJd-ZVi9od-vH1Gmf *, .VIpgJd-ZVi9od-l9xktf * {
+font-family: arial;
+font-size: 22pt !important;
+}
+/* ----------new footer css is closed ----------------- */
+.nsti img{
+    border-top: none;
+    position: relative;
+    top: -10px;
+}
