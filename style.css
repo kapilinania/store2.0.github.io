@@ -414,6 +414,10 @@ body {
       .company_daat{
         padding-top: 20px;
       }
+      .icon_li{
+        display: none;
+       border: 1px solid red;
+      }
 }
 
 /* -----back to top code is here ------------------ */
