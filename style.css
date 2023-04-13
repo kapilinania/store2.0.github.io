@@ -947,4 +947,82 @@ body {
 .radianece_color_hedaer{
     color: #FCA311;
 }
+.let_chat{
+    border: 1px solid #14213D;
+    padding: 15px 25px 15px 25px;
+    text-decoration: none;
+    color: #FCA311;
+    font-size: 21px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.let_chat:hover{
+    background: #14213D;
+    color: white;
+}
+.sales{
+    position: relative;  
+}
+.borderdata{
+    border-left: 4px solid #FCA311;
+    height: 3.725rem;
+     position: absolute;
+     top: 20px;
+    
+}
+.borderdata1{
+    border-left: 4px solid #14213D;
+    height: 3.725rem;
+     position: absolute;
+     top: 20px;
+    
+}
+.borderdata2{
+    border-left: 4px solid #919593;
+    height: 3.725rem;
+     position: absolute;
+     top: 20px;
+    
+}
+.borderdata3{
+    border-left: 4px solid #FCA311;
+    height: 3.725rem;
+     position: absolute;
+     top: 20px;
+    
+}
+.slider_part{
+    width: 90%;
+    border: 0px solid red;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.slider_part1{
+    border-right: 4px solid #ffffff;
+}
+.contactfrom_part{
+    width: 90%;
+    margin: auto;
+}
+.firstname{
+    
+    border-bottom: 3px solid #14213D  !important;
+}
+ .form-control{
+     background-color: #F9F9F8; 
+     border-radius: 0rem;  
+} 
+
+.no-border:hover {
+    border: 0;
+    box-shadow: none; 
+    background-color: #F9F9F8;
+}
+.no-border {
+    border: 0;
+    box-shadow: none; 
+    background-color: #F9F9F8;
+}
+
 /* slider css is here */
