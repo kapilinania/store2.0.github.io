@@ -993,7 +993,7 @@ body {
     
 }
 .slider_part{
-    width: 90%;
+    width: 100%;
     border: 0px solid red;
     margin: auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
