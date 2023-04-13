@@ -597,6 +597,22 @@ body {
 .dark-mode .Appoinments_card:hover{
     color: #FCA311;
 }
+.dark-mode .sales-contact{
+    color: #14213D;
+}
+.dark-mode .sales_content{
+    color: #14213D;
+}
+.dark-mode .slider_part{
+    width: 100%;
+    border: 1px solid rgb(122, 115, 115);
+    margin: auto;
+    box-shadow: rgba(253, 253, 253, 0) 0px 3px 8px;
+    border-radius: 10px;
+}
+.dark-mode .slider_part1{
+    border-right: 1px solid #ffffff;
+}
 
 
 
