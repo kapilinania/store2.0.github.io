@@ -444,7 +444,22 @@ body {
 
     .icon_li {
         display: none;
-        border: 1px solid red;
+        border: 0px solid red;
+    }
+    .middle_feature{
+        width: 60%;
+        height: 1800px !important;
+        background-color: #FCA311;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border: 0px solid red;
+        
+    }
+    .sign1{
+       padding-left: -15px !important; 
+    }
+    .oneflatform{
+        font-size: 2rem !important;
     }
 }
 
@@ -514,11 +529,80 @@ body {
 /* -----back to top is closed here ------------ */
 /* --------dark mode is here ---------------- */
 
-
 .dark-mode {
-    background-color: rgb(133, 133, 130);
+    background-color: rgb(1, 1, 1);
     color: white;
 }
+
+.dark-mode .header_color{
+    background-color: rgb(1, 1, 1);
+    color: white;
+}
+.dark-mode .radiance {
+    background-color: rgb(1, 1, 1);
+    color: white;
+}
+.dark-mode .nav-link{
+    background-color: rgb(1, 1, 1);
+    color: white !important;
+} 
+.dark-mode #sun_bright{
+    color: white !important;  
+}
+.dark-mode #search i{
+    color: white !important;  
+}
+.dark-mode #heart i{
+    color: white !important;  
+}
+.dark-mode #bounding i{
+    color: white !important;  
+}
+/* -------index page is over now dark mode ------------- */
+.dark-mode .fetature_expect{
+    /* color: #FCA311; */
+    color: white;
+}
+.dark-mode .fetature_expect2{
+    color: white;
+}
+.dark-mode .key_features{
+    color: #FCA311;
+}
+.dark-mode .data_driven{
+    color: #14213D;
+}
+.dark-mode .Productlaptop{
+    color: white;
+}
+.dark-mode .sign1:before{
+    background: #FCA311;
+    border: 2px solid white;
+}
+.dark-mode .fetature_expect_about{
+    color: #FCA311;
+}
+.dark-mode .oneflatform{
+    color: #FCA311;
+}
+.dark-mode .platform{
+    color: white;
+}
+.dark-mode .platform{
+    color: white;
+}
+.dark-mode .Appoinments_card{
+    color: white;
+}
+.dark-mode .Appoinments_card:hover{
+    color: #FCA311;
+}
+
+
+
+
+
+
 
 /* -----dark mode is closed here -------- */
 /* ----new footer css is here -------------- */
@@ -536,7 +620,20 @@ body {
     font-size: 20px;
     margin-left: -32px;
     border-radius: 0px 8px 8px 0px;
+    cursor: pointer;
 }
+.btn_footer_started:hover{
+    border: 0px solid red;
+    padding: 15px 30px 15px 30px;
+    background-color: #FCA311;
+    color: #14213D;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: -32px;
+    border-radius: 0px 8px 8px 0px;
+    cursor: pointer;
+}
+
 
 .footer_from {
     padding: 15px 30px 15px 30px;
@@ -720,6 +817,7 @@ body {
     background-color: #FCA311;
     margin: auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 0px solid red;
     
 }
 .fet_card_position{
@@ -845,5 +943,8 @@ body {
 }
 .appitment_data{
     width: 10vh;
+}
+.radianece_color_hedaer{
+    color: #FCA311;
 }
 /* slider css is here */
