@@ -461,6 +461,49 @@ body {
     .oneflatform{
         font-size: 2rem !important;
     }
+    .team-images{
+    width: 100px !important;
+    height: 100px !important;
+    border: 2px solid #14213D;
+    position: absolute;
+    top: -50px !important;
+    left: 100px !important;
+    border-radius: 50%;
+    background: url(https://avatars.githubusercontent.com/u/67285213?v=4);
+    background-size: cover;
+    }
+    .btn_footer_started {
+        padding: 15px 10px 15px 10px !important;
+        background-color: #FCA311;
+        color: #14213D;
+        font-weight: bold;
+        font-size: 20px;
+        margin-left: -32px;
+        border-radius: 0px 8px 8px 0px;
+        cursor: pointer;
+    }
+    .btn_footer_started:hover{
+        border: 0px solid red;
+        padding: 15px 10px 15px 10px !important ;
+        background-color: #FCA311 !important;
+        color: #14213D;
+        font-weight: bold;
+        font-size: 20px;
+        margin-left: -32px;
+        border-radius: 0px 8px 8px 0px;
+        cursor: pointer;
+    }
+    .team_card{
+        left: -50px;
+        top: 50px;
+    }
+    .jodh-location{
+        display: none;
+        color: #FCA311;
+    }
+    .teamlo{
+        color: #FCA311;
+    }
 }
 
 /* -----back to top code is here ------------------ */
@@ -629,7 +672,7 @@ body {
 }
 
 .btn_footer_started {
-    padding: 15px 30px 15px 30px;
+    padding: 15px 10px 15px 10px;
     background-color: #FCA311;
     color: #14213D;
     font-weight: bold;
@@ -640,7 +683,7 @@ body {
 }
 .btn_footer_started:hover{
     border: 0px solid red;
-    padding: 15px 30px 15px 30px;
+    padding: 15px 10px 15px 10px;
     background-color: #FCA311;
     color: #14213D;
     font-weight: bold;
