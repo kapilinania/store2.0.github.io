@@ -462,12 +462,12 @@ body {
         font-size: 2rem !important;
     }
     .team-images{
-    width: 100px !important;
-    height: 100px !important;
+    width: 150px !important;
+    height: 150px !important;
     border: 2px solid #14213D;
     position: absolute;
-    top: -50px !important;
-    left: 100px !important;
+    top: -90px !important;
+    left: 60px !important;
     border-radius: 50%;
     background: url(https://avatars.githubusercontent.com/u/67285213?v=4);
     background-size: cover;
