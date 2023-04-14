@@ -892,8 +892,8 @@ body {
 }
 .form_about_top{
     border: none;
-    background: #E5E5E5;
-    border-radius: 54px;
+    background: #E5E5E5 !important;
+    border-radius: 54px !important;
     width: calc(100% - 100px);
     height: 100%;
     font-size: 18px;
@@ -1058,4 +1058,197 @@ body {
 .icon_heart>i.red{
     color: red; 
   
+}
+
+
+
+.team_card{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+    border: 0px solid red;
+    border-radius: 150px 0px 150px 0px;
+    position: relative;
+    border: 0.35rem solid;
+	border-image: conic-gradient(from var(--angle), var(--c2),var(--c3), var(--c1) 0.1turn, var(--c1), 0.15turn,var(--c3) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+
+:root {
+	--d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: #FCA311;
+	--c2: #26375c;
+    --c3:#E5E5E5;
+}
+
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+        /* border-radius: 500px; */
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
+}
+
+
+
+
+
+
+
+.team_card1{
+    width: 90%;
+    margin: auto;
+}
+.team-images{
+    width: 200px;
+    height: 200px;
+    border: 2px solid #14213D;
+    position: absolute;
+    top: -120px;
+    left: 130px;
+    border-radius: 50%;
+    background: url(https://avatars.githubusercontent.com/u/67285213?v=4);
+    background-size: cover;
+}
+.jodh-location{
+    font-size: 28px;
+}
+
+.profile-card-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.profile-card-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    width: 300px;
+    height: 60px;
+    border-radius: 80px;
+    padding: 0 18px;
+    will-change: transform;
+    transition: all .2s ease-in-out;
+}
+
+.profile-card-button:hover {
+    transform: scale(1.1);
+}
+
+
+.profile-card-button span {
+    position: absolute;
+    z-index: 99;
+    width: 300px;
+    height: 60px;
+    border-radius: 80px;
+    font-size: 23px;
+    text-align: center;
+    line-height: 60px;
+    letter-spacing: 2px;
+    color: #14213D;
+    background-color: #FCA311;
+    padding: 0 18px;
+    transition: all 1.2s ease;
+}
+
+.profile-card-button:hover span {
+    transform: translateX(-300px);
+    transition-delay: .15s;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    height: 64px;
+    border-radius: 80px;
+}
+
+.social-icons>i {
+    opacity: 0;
+    font-size: 24px;
+    transform: scale(.1);
+    transition: all .3s ease;
+}
+.profile-card-button:hover i {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.profile-card-button:hover i:hover {
+    font-size: 28px;
+    color: #0078d7;
+    transition: font-size .2s;
+}
+
+.social-icons>i:nth-of-type(5) {
+    transition-property: opacity, transform;
+    transition-delay: .4s;
+}
+
+.social-icons>i:nth-of-type(4) {
+    transition-property: opacity, transform;
+    transition-delay: .5s;
+}
+
+.social-icons>i:nth-of-type(3) {
+    transition-property: opacity, transform;
+    transition-delay: .6s;
+}
+
+.social-icons>i:nth-of-type(2) {
+    transition-property: opacity, transform;
+    transition-delay: .7s;
+}
+
+.social-icons>i:nth-of-type(1) {
+    transition-property: opacity, transform;
+    transition-delay: .8s;
 }
