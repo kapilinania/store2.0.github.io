@@ -3,13 +3,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Radiance Attire</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
     <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
@@ -76,9 +78,7 @@
               </nav>
         </div>
          <!-- ------------------ nav bar is closed is here------------------------ -->
-    </div>
-   
-      
+    </div>   
        <!-- ---------------------first slider is here --------------------- -->
        <div class="container-fluid firstslide ">
         <section class="head_icon">
@@ -241,7 +241,7 @@
         <!-- ------------------second mobile slider is over now ---------------- -->
 
     </div>
-    <!-- ----------------middle section is here ------------ -->
+    <!-- ----------------middle dammy product section is here ------------ -->
     <div class="container-fluid mt-5">
         <div class="container">
             <div class="row mx-auto mt-3 ">
@@ -281,7 +281,6 @@
             </div>
         </div>
     </div>
-
     <!-- -------middle part is here -------------------- -->
     <div class="container-fluid mt-4 bg-white pt-4 ">
         <div class="container">
@@ -332,11 +331,85 @@
                   </div>
                 </div>
               </nav>
+              <!-- ------------------------------ new code data -------- -->
+              <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse middle_nav" id="navbarSupportedContent">
+                        <form class="d-flex" role="search">
+                           
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                            id="navSearch" onkeyup="navSearchFunction()">
+                        </form>
+                    </div>
+                    
+                </div>
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse " >
+                        <div class="my-2">CATEGORIES</div>
+                        <form>
+                            <div class="multiselect">
+                              <div class="selectBox" onclick="showCheckboxes()" >
+                                <select class="form-select"  >
+                                  <option>Select an option</option>
+                                </select>
+                                <div class="overSelect"></div>
+                              </div>
+                              <div id="navbarSupportedContent-category" >
+                                
+                              </div>
+                            </div>
+                          </form>
+                       
+                        
+                       
+                       
+                    </div>
+                    <div class="my-2">All Brands</div>
+                    <form>
+                        <div class="multiselect">
+                          <div class="selectBox" onclick="showCheckboxes2()">
+                            <select class="form-select" >
+                              <option>All Brands</option>
+                              
+                            </select>
+                            <div class="overSelect"></div>
+                          </div>
+                          <div id="navbarSupportedContent-brand">
+                            
+                          </div>
+                        </div>
+                      </form>
+                    
+                   
+                    
+                </div>
+            </nav>
+
+
+
+
+
+
+
+              <!-- ------------------------  data is closed ----------------- -->
               <div class="row" id="allcard">
-        </div>
+
+              </div>
         </div>
         
-    </div>        
+    </div>  
+    
+    <!-- ------middle part is closed here --------------------- -->
     <!-- ----------------footer section is started here ----------------------- -->
     <!-- Footer -->
     <div class="container-fluid1 nsti" style="background-color: #23242a;">
@@ -591,9 +664,6 @@
         <i class="bi bi-arrow-up"></i>
     </button>
     <!-- ------back to top button is closed here -------------- --> 
-
-    
-
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="script.js"></script>
