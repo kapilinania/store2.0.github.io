@@ -173,4 +173,7 @@ function googleTranslateElementInit() {
 
   let date_foot1 = new Date();
    let ftt = document.getElementById("date_foot").innerHTML = date_foot1.getFullYear();
+
+   //nav bar active code is here  
+
   

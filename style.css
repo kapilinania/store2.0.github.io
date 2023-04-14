@@ -332,6 +332,18 @@ body {
 .nav_padding ul li {
     padding-left: 4rem;
 }
+.nav-item  a {
+    color: #4b4848 !important;
+    border: 0px solid red;
+}
+
+.nav-item  a:hover {
+    color: black !important;
+    border: 0px solid red;
+}
+
+
+
 
 .icon a {
     color: black;
