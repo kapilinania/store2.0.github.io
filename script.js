@@ -247,7 +247,7 @@ idDisplayCard = (value2) => {
     </a>
     <div class="product-details">
       <div class="brand-name">${element.brand}</div>
-      <a class="brand-desc" data-bs-toggle="modal" data-bs-target="#staticBackdrop" title="" onclick="singleiddescription(${element.id})">${element.title}</a>
+      <a class="brand-desc" title="" target="_blank" href="${element.id}">${element.title} (Grey)</a>
       <div class="color-details">Grey</div>
       
       <a class="" target="_blank" href="#">
@@ -333,83 +333,15 @@ function navSearchFunction() {
 
   idDisplayCard(searchResult);
 }
-function singleiddescription(data){
-  let myproductid = data;
-  let myproductdetail = '';
-  fetch(`https://dummyjson.com/products/${myproductid}`)
-    .then(response => response.json())    
-    .then(element=>  {   
-      let percentagevalue= element.price/element.discountPercentage;
-      percentagevalue = Number.parseInt(element.price-percentagevalue);
-    
-     myproductdetail+=`     
-     <div class="product-card">
-     <a class="aaa" target="_blank"">
-       <div class="product-front-image">
-         <div class="front-image">
-           <img alt="" class="img-fluid" src="${element.thumbnail}" onclick="singleproductdetail()>
-         </div>
-         <div class="owl-slider">
-           <div id="carousel3" class="owl-carousel product-slider">
-             <div class="product-image">
-               <img alt="" src="${element.images[0]}">
-             </div>
-             <div class="product-image">
-               <img alt="" src="${element.images[1]}">
-             </div>
-           </div>
-         </div>
-        <div class="row">
-         <div class=" col-12">
-                   <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                       <div class="carousel-inner">
-                         <div class="carousel-item active">
-                           <img src="${element.images[2]}" class="d-block w-100 carosal_images" alt="No Api Images">
-                         </div>
-                         <div class="carousel-item">
-                           <img src="${element.images[0]}" class="d-block w-100" alt="...">
-                         </div>
-                         <div class="carousel-item">
-                           <img src="${element.images[1]}" class="d-block w-100" alt="...">
-                         </div>   
-                       </div>
-                     </div>
-               </div>
-         </div>
-         <div class="product-like">
-           <svg xmlns="http://www.w3.org/2000/svg" class="_2oLiqr" width="28" height="28" viewBox="0 0 20 16">
-             <path
-               d="M8.695 16.682C4.06 12.382 1 9.536 1 6.065 1 3.219 3.178 1 5.95 1c1.566 0 3.069.746 4.05 1.915C10.981 1.745 12.484 1 14.05 1 16.822 1 19 3.22 19 6.065c0 3.471-3.06 6.316-7.695 10.617L10 17.897l-1.305-1.215z"
-               class="_35Y7Yo" stroke="#FFF" fill-rule="evenodd" opacity=".9"></path>
-           </svg>
-         </div>
-       </div>
-     </a>
-     <div class="product-details">
-       <div class="brand-name">${element.brand}</div>
-       <a class="brand-desc" title="" onclick="singleiddescription(${element.id})">${element.title} (Grey)</a>
-       <div class="color-details">Grey</div>
-       
-       <a class="" target="_blank" href="#">
-         <div class="price-info-sec">
-           <div class="price">₹${percentagevalue} </div>
-           <div class="cut-off">₹${element.price}</div>
-           <div class="discount-percent"><span>${Math.ceil(element.discountPercentage)}% off</span></div>
-         </div>
-       </a>
-     </div>
-   </div>
-   <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-       
-      </div>
-       
-    `
+function singleproductdetail(){
+  var anchor = document.querySelector("a")
+  let abc=(anchor.getAttribute('href'));
+  console.log(abc)
 
-    thisismydetail.innerHTML=myproductdetail
-  
-})
- 
+//  var data1 = filteredData.includes(
+//   (productdetail) => productdetail.id === productId
+// );
+// console.log(data1)
 }
 
 //fetch data from github for users
