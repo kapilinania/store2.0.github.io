@@ -105,14 +105,25 @@ allcard.innerHTML = ihtml;
 
 //head heart icon color change
 
-$("#heart").click(function(){
-    $("#heart").html("<i class='bi bi-heart-fill  '></i>");
-    $("#heart").css('color','red');
-})
+// $("#heart").click(function(){
+//     $("#heart").html("<i class='bi bi-heart-fill  '></i>");
+//     $("#heart").css('color','red');
+// })
 $("#sun_bright").click(function(){
     $("#sun_bright").html("<i class='bi bi-brightness-high-fill'></i>");
     $("#sun_bright").css('color','black');
 })
+ function favourite() {
+            const heartRed = document.querySelector(".icon_heart>i.red");
+            if (heartRed) {
+                heartRed.classList.remove("red");
+            }
+            else {
+                const heart = document.querySelector(".icon_heart>i");
+                heart.classList.add("red");
+            }
+
+        }
 
 
 //button css is herer
@@ -158,11 +169,8 @@ function darkmode() {
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 }
+  //date code is here
 
-$(function(){
-    $("#feature").load("index.html"); 
-  });
-
-
-  //slider is here
+  let date_foot1 = new Date();
+   let ftt = document.getElementById("date_foot").innerHTML = date_foot1.getFullYear();
   

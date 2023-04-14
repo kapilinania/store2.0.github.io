@@ -1042,3 +1042,20 @@ body {
 }
 
 /* slider css is here */
+.icon_heart a {
+    color: black;
+    border: 1px solid black;
+}
+
+.icon_heart {
+    margin-top: -13px;
+}
+.icon_heart i {
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+.icon_heart>i.red{
+    color: red; 
+  
+}
