@@ -464,16 +464,14 @@ body {
     .oneflatform{
         font-size: 2rem !important;
     }
-    .team-images{
-    width: 150px !important;
-    height: 150px !important;
+    .team-images img{
+    width: 100px !important;
+    height: 100px !important;
     border: 2px solid #14213D;
     position: absolute;
-    top: -90px !important;
+    top: -40px !important;
     left: 60px !important;
     border-radius: 50%;
-    background: url(https://avatars.githubusercontent.com/u/67285213?v=4);
-    background-size: cover;
     }
     .btn_footer_started {
         padding: 15px 10px 15px 10px !important;
@@ -496,16 +494,14 @@ body {
         border-radius: 0px 8px 8px 0px;
         cursor: pointer;
     }
-    .team_card{
-        left: -50px;
-        top: 50px;
-    }
+
     .jodh-location{
         display: none;
         color: #FCA311;
     }
     .teamlo{
         color: #FCA311;
+        font-size: 20px;
     }
 }
 
@@ -861,6 +857,70 @@ body {
     top: -30px;
     left: -30px;
 }
+
+.sign_buy {
+    font-family: sans-serif;
+    display: inline-block;
+    width: 170px;
+    height: 50px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #14213D;
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 19px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #14213D;
+    margin-left: 15px;
+    background-color: #ffffff;
+    cursor: pointer;
+    color: #14213D;
+
+}
+
+
+
+.sign_buy:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 120px;
+    background-color: #14213D;
+    width: 300px;
+    border-radius: 50%;
+    color: #ffffff;
+    
+}
+
+.sign_buy a:hover {
+    color: #fff;
+
+}
+.sign_buy a {
+    color: #14213D;
+
+}
+
+.sign_buy:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.5s;
+}
+
+.sign_buy:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+
+
+
+
+
+
+
 .key_features{
     color: #14213D;
     font-size: 45px;
@@ -1111,7 +1171,7 @@ body {
 
 .team_card{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
-    border: 0px solid red;
+    border: 5px solid red;
     border-radius: 150px 0px 150px 0px;
     position: relative;
     border: 0.35rem solid;
@@ -1182,20 +1242,17 @@ body {
 
 
 
-.team_card1{
-    width: 90%;
-    margin: auto;
-}
-.team-images{
+
+.team-images img{
     width: 200px;
     height: 200px;
     border: 2px solid #14213D;
     position: absolute;
-    top: -120px;
+    top: -100px;
     left: 130px;
     border-radius: 50%;
-    background: url(https://avatars.githubusercontent.com/u/67285213?v=4);
-    background-size: cover;
+    margin-bottom: 50px;
+    
 }
 .jodh-location{
     font-size: 28px;
@@ -1464,8 +1521,7 @@ body {
     height: 350px !important;
 }
 
-/* login and registration form css is here---- */
-
-
-
-/* login and registration css is closed-------------- */
+.kapil{
+    border: 2px solid red;
+    display: flex;
+}

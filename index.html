@@ -298,116 +298,66 @@
                   <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">All Products</a>
+                            <a class="nav-link active" aria-current="page" id="allproduct">All Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="smartphone.html">Smartphones</a>
+                            <a class="nav-link" id="smartphn">Smartphones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="motorcycle.html">motorcycle</a>
+                            <a class="nav-link" id="motorcycle">motorcycle</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="fragrances.html">fragrances</a>
+                            <a class="nav-link" id="fragrances">fragrances</a>
                         </li>
-                        
+
                         <li class="nav-item">
-                            <a class="nav-link" href="groceries.html">groceries
+                            <a class="nav-link" id="groceries">groceries
                             </a>
                         </li>
-                       
+
                         <li class="nav-item">
-                            <a class="nav-link" href="furniture.html">furniture
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Men.html">Men
+                            <a class="nav-link" id="furniture">furniture
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Woman.html">Woman
+                            <a class="nav-link" id="Men">Men
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="Woman">Woman
                             </a>
                         </li>
                     </ul>
-                  </div>
-                </div>
-              </nav>
-              <!-- ------------------------------ new code data -------- -->
-              <nav class="navbar navbar-expand-lg ">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse middle_nav" id="navbarSupportedContent">
+                    
+                    <div class="collapse navbar-collapse middle_nav " id="navbarSupportedContent">
                         <form class="d-flex" role="search">
                            
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                            <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search"
                             id="navSearch" onkeyup="navSearchFunction()">
                         </form>
                     </div>
-                    
+                  </div>
                 </div>
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse " >
-                        <div class="my-2">CATEGORIES</div>
-                        <form>
-                            <div class="multiselect">
-                              <div class="selectBox" onclick="showCheckboxes()" >
-                                <select class="form-select"  >
-                                  <option>Select an option</option>
-                                </select>
-                                <div class="overSelect"></div>
-                              </div>
-                              <div id="navbarSupportedContent-category" >
-                                
-                              </div>
-                            </div>
-                          </form>
-                       
-                        
-                       
-                       
-                    </div>
-                    <div class="my-2">All Brands</div>
-                    <form>
-                        <div class="multiselect">
-                          <div class="selectBox" onclick="showCheckboxes2()">
-                            <select class="form-select" >
-                              <option>All Brands</option>
-                              
-                            </select>
-                            <div class="overSelect"></div>
-                          </div>
-                          <div id="navbarSupportedContent-brand">
-                            
-                          </div>
-                        </div>
-                      </form>
-                    
-                   
-                    
-                </div>
-            </nav>
-
-
-
-
-
-
-
+              </nav>
               <!-- ------------------------  data is closed ----------------- -->
+
+              <!-- ------------------------ modal for single data show ----------------- -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" id="thisismydetail">
+                    
+                </div>
+                
+            </div>
+        </div>
+        <!-- ------------------------ modal ends here ----------------- -->
               <div class="row" id="allcard">
 
               </div>
         </div>
         
-    </div>  
+    </div> 
     
     <!-- ------middle part is closed here --------------------- -->
     <!-- ----------------footer section is started here ----------------------- -->
