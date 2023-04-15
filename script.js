@@ -426,4 +426,26 @@ function googleTranslateElementInit() {
    let ftt = document.getElementById("date_foot").innerHTML = date_foot1.getFullYear();
 //date code is closed here  
 
-  
+//jquery counter code is here
+$('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 4000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
+//jquery counter code is closed here
+//word counter code is here'
+function countWords(self) {
+  var spaces = self.value.match(/\S+/g);
+  var words = spaces ? spaces.length : 0;
+
+  document.getElementById("count-words").innerHTML = words + " words";
+}
+//word counter is closed here
+
+//word counter code is closed here
