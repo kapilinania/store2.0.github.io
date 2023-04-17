@@ -950,69 +950,106 @@ function countWords(self) {
 
 //git api section is here
 
-let userGit = ["kapilinania", "kalyanseervi", "iamharshvardhangehlot", "deepak-ganwani", "iamhimanshugulati"];
-let gitUserData=[];
-let ihtml = "";
-for (let index = 0; index < userGit.length; index++) {
-    
-    fetch(`https://api.github.com/users/${userGit[index]}`)
-    
+fetch('gitteam.json')
     .then((response) => response.json())
-    
-    .then((gitData) => {
-      console.log(gitData)
-      ihtml += `
-
-      <div class="col team_card m-5 pb-5">
-      <div class="p-3">
-          <div class="col-5 team-images">
-          <img src="${gitData.avatar_url}" class="img-fluid">
-          </div>
-          <div class="col text-center pt-5  mt-5 "><h3 class="fw-bold">${gitData.name}</h3></div>
-          <div class="col text-center"><h5>${gitData.bio}</h5></div>
-          <div class="col pt-3"> <p class="text-justify fs-5 text-center">A typical web development team looks like this: requirements analyst; Project Manager; UI/UX designer; web developer; QA Engineer</p> </div>
-          <div class="col  text-center "> <i class="bi bi-geo-alt-fill jodh-location"></i> <span class="fs-5 teamlo">Jodhpur(Rajasthan)</span></div>
-          <div class="row text-center pt-4">
-              <div class="col fw-bold fs-2 count">${gitData.followers}</div>
-              <div class="col fw-bold fs-2 count">${gitData.public_repos}</div>
-              <div class="col fw-bold fs-2 count">${gitData.following}</div>
-          </div>
-          <div class="row text-center pb-2">
-              <div class="col fs-3">followers</div>
-              <div class="col fs-3">work</div>
-              <div class="col fs-3">following</div>
-          </div>
-          
-          <div class="profile-card-buttons mb-5">
-              <div class="profile-card-button">
-                  <span>contact me</span>
-                  <div class="social-icons">
-                      <i class="fa-brands fa-facebook-f"></i>
-                      <i class="fa-brands fa-twitter"></i>
-                      <i class="fa-brands fa-instagram"></i>
-                      
-                      <a href="${gitData.repos_url}"><i class="fa-brands fa-github"></i></a>
-                      <i class="fa-brands fa-linkedin"></i>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-      `;
-      allcardgit.innerHTML = ihtml; 
+    .then((value2) => {
+      console.log(value2);  
+       let ihtml1 = "";
+       
+        for( data in value2){
+            console.log(value2[data].login); 
+            ihtml1 += `
+            <div class="col team_card m-5 pb-5  ">
+            <div class="p-3 ">
+                <div class="col-5 team-images">
+                <img src="${value2[data].avatar_url}" class="img-fluid">
+                </div>
+                <div class="col text-center pt-5  mt-5 "><h3 class="fw-bold">${value2[data].login}</h3></div>
+                <div class="col text-center"><h5>${value2[data].bio}</h5></div>
+                <div class="col pt-3"> <p class="text-justify fs-5 text-center">A typical web development team looks like this: requirements analyst; Project Manager; UI/UX designer; web developer; QA Engineer</p> </div>
+                <div class="col  text-center "> <i class="bi bi-geo-alt-fill jodh-location"></i> <span class="fs-5 teamlo">Jodhpur(Rajasthan)</span></div>
+                <div class="row text-center pt-4">
+                    <div class="col fw-bold fs-2 count">${value2[data].followers}</div>
+                    <div class="col fw-bold fs-2 count">${value2[data].public_repos}</div>
+                    <div class="col fw-bold fs-2 count">${value2[data].following}</div>
+                </div>
+                <div class="row text-center pb-2">
+                    <div class="col fs-5 text-capitalize">followers</div>
+                    <div class="col fs-5 text-capitalize">repo</div>
+                    <div class="col fs-5 text-capitalize">following</div>
+                </div>
+                
+                <div class="profile-card-buttons mb-5">
+                    <div class="profile-card-button">
+                        <span>contact me</span>
+                        <div class="social-icons">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            
+                            <a href="${value2[data].repos_url}"><i class="fa-brands fa-github"></i></a>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            `;
+            allcardgit.innerHTML = ihtml1; 
+            
+        }
     })
-   
-    //gitUserData.push(gitData))
-   
-    
+    //git api closed here 
+    //mentor api section is here
+    fetch('mentor.json')
+    .then((response) => response.json())
+    .then((value2) => {
+      console.log(value2);  
+       let ihtml1 = "";
+       
+        for( data in value2){
+            console.log(value2[data].login); 
+            ihtml1 += `
+            <div class="col team_card m-5 pb-5  ">
+            <div class="p-3 ">
+                <div class="col-5 team-images">
+                <img src="${value2[data].avatar_url}" class="img-fluid">
+                </div>
+                <div class="col text-center pt-5  mt-5 "><h3 class="fw-bold">${value2[data].login}</h3></div>
+                <div class="col text-center"><h5>${value2[data].bio}</h5></div>
+                <div class="col pt-3"> <p class="text-justify fs-5 text-center">A typical web development team looks like this: requirements analyst; Project Manager; UI/UX designer; web developer; QA Engineer</p> </div>
+                <div class="col  text-center "> <i class="bi bi-geo-alt-fill jodh-location"></i> <span class="fs-5 teamlo">Jodhpur(Rajasthan)</span></div>
+                <div class="row text-center pt-4">
+                    <div class="col fw-bold fs-2 count">${value2[data].followers}</div>
+                    <div class="col fw-bold fs-2 count">${value2[data].public_repos}</div>
+                    <div class="col fw-bold fs-2 count">${value2[data].following}</div>
+                </div>
+                <div class="row text-center pb-2">
+                    <div class="col fs-3">followers</div>
+                    <div class="col fs-3">work</div>
+                    <div class="col fs-3">following</div>
+                </div>
+                
+                <div class="profile-card-buttons mb-5">
+                    <div class="profile-card-button">
+                        <span>contact me</span>
+                        <div class="social-icons">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            
+                            <a href="${value2[data].repos_url}"><i class="fa-brands fa-github"></i></a>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            `;
+            mentor_git.innerHTML = ihtml1; 
+            
+        }
+    })
 
-    
-    // .catch((error) => {
-    //     console.log(`Error: ${error}`);
-    // })
-    
-}
-
-console.log(gitUserData);
-
-//git api section is closed
+    //mentor api is closed
+      
