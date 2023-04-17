@@ -1627,6 +1627,8 @@ body {
     border: 1px solid red;
   }
 #nav-data li a{
-    color: #74747f !important;
-    
+    color: #74747f !important; 
+  }
+ #mentor_git img{
+    left: 30rem;
   }
