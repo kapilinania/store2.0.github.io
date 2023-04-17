@@ -189,7 +189,7 @@ document.getElementById("allproduct").addEventListener("click", function(){
       <a class="brand-desc" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${value2[item].id})">${value2[item].title}</a>
       <div class="color-details">Grey</div>
       
-      <a class="" target="_blank" href="#">
+      <a class="text-decoration-none" target="_blank" href="#">
         <div class="price-info-sec">
           <div class="price">₹${Number.parseInt(value2[item].price-(value2[item].price/value2[item].discountPercentage))} </div>
           <div class="cut-off">₹${value2[item].price}</div>
@@ -197,6 +197,7 @@ document.getElementById("allproduct").addEventListener("click", function(){
         </div>
       </a>
     </div>
+    <div class="pb-3 "><button type="button" class="btn sign_buy"><a class="text-decoration-none" title="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${value2[item].id})">Buy Now</a></button></div>
   </div>`;
    }
   
@@ -257,7 +258,7 @@ document.getElementById("allproduct").addEventListener("click", function(){
           <a class="brand-desc" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${smrtphonevalue[item].id})">${smrtphonevalue[item].title}</a>
           <div class="color-details">Grey</div>
           
-          <a class="" target="_blank" href="#">
+          <a class="text-decoration-none" target="_blank" href="#">
             <div class="price-info-sec">
               <div class="price">₹${Number.parseInt(smrtphonevalue[item].price-(smrtphonevalue[item].price/smrtphonevalue[item].discountPercentage))} </div>
               <div class="cut-off">₹${smrtphonevalue[item].price}</div>
@@ -265,6 +266,9 @@ document.getElementById("allproduct").addEventListener("click", function(){
             </div>
           </a>
         </div>
+        <div class="pb-3 "><button type="button" class="btn sign_buy"><a class="text-decoration-none" title="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${smrtphonevalue[item].id})">Buy Now</a></button></div>
+
+        
       </div>`;
     }
    
@@ -324,7 +328,7 @@ document.getElementById("allproduct").addEventListener("click", function(){
           <a class="brand-desc" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${motorcyclevalue[item].id})">${motorcyclevalue[item].title}</a>
           <div class="color-details">Grey</div>
           
-          <a class="" target="_blank" href="#">
+          <a class="text-decoration-none" target="_blank" href="#">
             <div class="price-info-sec">
               <div class="price">₹${Number.parseInt(motorcyclevalue[item].price-(motorcyclevalue[item].price/motorcyclevalue[item].discountPercentage))} </div>
               <div class="cut-off">₹${motorcyclevalue[item].price}</div>
@@ -332,6 +336,8 @@ document.getElementById("allproduct").addEventListener("click", function(){
             </div>
           </a>
         </div>
+        <div class="pb-3 "><button type="button" class="btn sign_buy"><a class="text-decoration-none" title="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${motorcyclevalue[item].id})">Buy Now</a></button></div>
+        
       </div>`;
     }
    
@@ -391,7 +397,7 @@ document.getElementById("allproduct").addEventListener("click", function(){
         <a class="brand-desc" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${frangrancevalue[item].id})">${frangrancevalue[item].title}</a>
         <div class="color-details">Grey</div>
         
-        <a class="" target="_blank" href="#">
+        <a class="text-decoration-none" target="_blank" href="#">
           <div class="price-info-sec">
             <div class="price">₹${Number.parseInt(frangrancevalue[item].price-(frangrancevalue[item].price/frangrancevalue[item].discountPercentage))} </div>
             <div class="cut-off">₹${frangrancevalue[item].price}</div>
@@ -399,6 +405,8 @@ document.getElementById("allproduct").addEventListener("click", function(){
           </div>
         </a>
       </div>
+      <div class="pb-3 "><button type="button" class="btn sign_buy"><a class="text-decoration-none" title="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${frangrancevalue[item].id})">Buy Now</a></button></div>
+      
     </div>`;
     }
    
@@ -458,7 +466,7 @@ document.getElementById("allproduct").addEventListener("click", function(){
         <a class="brand-desc" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${groceriesvalue[item].id})">${groceriesvalue[item].title}</a>
         <div class="color-details">Grey</div>
         
-        <a class="" target="_blank" href="#">
+        <a class="text-decoration-none" target="_blank" href="#">
           <div class="price-info-sec">
             <div class="price">₹${Number.parseInt(groceriesvalue[item].price-(groceriesvalue[item].price/groceriesvalue[item].discountPercentage))} </div>
             <div class="cut-off">₹${groceriesvalue[item].price}</div>
@@ -466,6 +474,8 @@ document.getElementById("allproduct").addEventListener("click", function(){
           </div>
         </a>
       </div>
+      <div class="pb-3 "><button type="button" class="btn sign_buy"><a class="text-decoration-none" title="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${groceriesvalue[item].id})">Buy Now</a></button></div>
+
     </div>`;
     }
    
@@ -525,7 +535,7 @@ document.getElementById("allproduct").addEventListener("click", function(){
         <a class="brand-desc" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${furniturevalue[item].id})">${furniturevalue[item].title}</a>
         <div class="color-details">Grey</div>
         
-        <a class="" target="_blank" href="#">
+        <a class="text-decoration-none" target="_blank" href="#">
           <div class="price-info-sec">
             <div class="price">₹${Number.parseInt(furniturevalue[item].price-(furniturevalue[item].price/furniturevalue[item].discountPercentage))} </div>
             <div class="cut-off">₹${furniturevalue[item].price}</div>
@@ -533,6 +543,8 @@ document.getElementById("allproduct").addEventListener("click", function(){
           </div>
         </a>
       </div>
+      <div class="pb-3 "><button type="button" class="btn sign_buy"><a class="text-decoration-none" title="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${furniturevalue[item].id})">Buy Now</a></button></div>
+
     </div>`;
     }
    
@@ -592,7 +604,7 @@ document.getElementById("allproduct").addEventListener("click", function(){
         <a class="brand-desc" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${Menvalue[item].id})">${Menvalue[item].title}</a>
         <div class="color-details">Grey</div>
         
-        <a class="" target="_blank" href="#">
+        <a class="text-decoration-none" target="_blank" href="#">
           <div class="price-info-sec">
             <div class="price">₹${Number.parseInt(Menvalue[item].price-(Menvalue[item].price/Menvalue[item].discountPercentage))} </div>
             <div class="cut-off">₹${Menvalue[item].price}</div>
@@ -600,6 +612,7 @@ document.getElementById("allproduct").addEventListener("click", function(){
           </div>
         </a>
       </div>
+      <div class="pb-3 "><button type="button" class="btn sign_buy"><a class="text-decoration-none" title="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${Menvalue[item].id})">Buy Now</a></button></div>
     </div>`;
     }
    
@@ -659,7 +672,7 @@ document.getElementById("allproduct").addEventListener("click", function(){
         <a class="brand-desc" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${Womanvalue[item].id})">${Womanvalue[item].title}</a>
         <div class="color-details">Grey</div>
         
-        <a class="" target="_blank" href="#">
+        <a class="text-decoration-none" target="_blank" href="#">
           <div class="price-info-sec">
             <div class="price">₹${Number.parseInt(Womanvalue[item].price-(Womanvalue[item].price/Womanvalue[item].discountPercentage))} </div>
             <div class="cut-off">₹${Womanvalue[item].price}</div>
@@ -667,6 +680,8 @@ document.getElementById("allproduct").addEventListener("click", function(){
           </div>
         </a>
       </div>
+      <div class="pb-3 "><button type="button" class="btn sign_buy"><a class="text-decoration-none" title="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${Womanvalue[item].id})">Buy Now</a></button></div>
+      
     </div>`;
     }
    
@@ -1052,4 +1067,14 @@ fetch('gitteam.json')
     })
 
     //mentor api is closed
+
+    //data-active nav bar code is here
+    $(document).ready(function(){
+      $('ul li a').click(function(){
+          $('li a').removeClass("active");
+          $(this).addClass("active");
+      });
+      });
+ 
+    // data active bav bar is closed
       

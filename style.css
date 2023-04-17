@@ -342,6 +342,9 @@ body {
 
 .icon {
     margin-top: -13px;
+    border: 0px solid red;
+    margin-right: 25px;
+    cursor: pointer;
 }
 
 .mobile_slider {
@@ -529,9 +532,9 @@ body {
     .team_card{
         display: flex;
         flex-direction:column !important;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+        /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important; */
         border: 5px solid red;
-        border-radius: 150px 0px 150px 0px;
+        /* border-radius: 150px 0px 150px 0px; */
         position: relative;
         border: 0.35rem solid;
         border-image: conic-gradient(from var(--angle), var(--c2),var(--c3), var(--c1) 0.1turn, var(--c1), 0.15turn,var(--c3) 0.15turn, var(--c2) 0.25turn) 30;
@@ -689,7 +692,29 @@ body {
 .dark-mode .slider_part1{
     border-right: 1px solid #ffffff;
 }
+.dark-mode .product-card {
+    width: 270px;
+    background: black;
+    margin: 80px auto;
+    box-shadow: 1px 3px 10px rgba(254, 252, 252, 0.65) !important;
+    color: white;
+    border: 0px solid white;
+    border-radius: 10px 10px 0px 0px;
+}
+.dark-mode .price {
+    color: white !important;
+}
 
+.dark-mode .discount-percent {
+    color: white;
+}
+.dark-mode .brand-desc {
+    color: white !important;
+}
+.dark-mode .sign_buy:before{
+    background: #FCA311;
+    border: 2px solid white;
+}
 
 
 
@@ -996,7 +1021,7 @@ body {
     padding: 35px;
     border: 0px solid #14213D !important;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px 0px;
 }
 .fet_card{
     border: 5px solid #14213D;
@@ -1207,9 +1232,9 @@ body {
     display: flex;
     flex-direction:column !important;
     margin-top: 5rem !important;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+     /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important; */
     /* border: 5px solid red; */
-    border-radius: 150px 0px 150px 0px;
+    /* border-radius: 150px 0px 150px 0px; */
     position: relative;
     border: 0.35rem solid;
 	border-image: conic-gradient(from var(--angle), var(--c2),var(--c3), var(--c1) 0.1turn, var(--c1), 0.15turn,var(--c3) 0.15turn, var(--c2) 0.25turn) 30;
@@ -1236,7 +1261,7 @@ body {
 }
 
 :root {
-	--d: 1500ms;
+	--d: 2500ms;
 	--angle: 90deg;
 	--gradX: 100%;
 	--gradY: 50%;
@@ -1595,3 +1620,13 @@ body {
 .nav-link{
     cursor: pointer !important;
 }
+
+/* visited link code  */
+.active{
+    color: black !important;
+    border: 1px solid red;
+  }
+#nav-data li a{
+    color: #74747f !important;
+    
+  }
