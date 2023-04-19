@@ -31,7 +31,10 @@
         "followers": 5,
         "following": 60,
         "created_at": "2020-06-22T17:08:41Z",
-        "updated_at": "2023-04-10T04:05:36Z"
+        "updated_at": "2023-04-10T04:05:36Z",
+        "git_data":"https://github.com/kapilinania",
+        "linkden_data":"https://in.linkedin.com/in/kapil-inania-a4a548160",
+        "port_data":"https://kapilinania.github.io/portfolio.github.io/"
       },
       {
         "login": "kalyanseervi",

@@ -325,12 +325,12 @@ body {
 /* new css is here  */
 .nav_padding {
     border: 0px solid red;
-    padding-left: 3rem;
+    margin-left: 3rem;
     margin-top: -13px;
 }
 
 .nav_padding ul li {
-    padding-left: 4rem;
+    margin-left: 3rem;
 }
 
 
@@ -413,6 +413,15 @@ body {
 @media only screen and (max-width: 900px) and (min-width: 200px) {
     .nav_padding {
         padding-left: 0rem;
+    }
+    .nav_padding {
+        border: 0px solid red;
+        margin-left: 0rem;
+        margin-top: -13px;
+    }
+    
+    .nav_padding ul li {
+        margin-left: 0rem;
     }
 
     .nav_padding ul li {
@@ -715,6 +724,62 @@ body {
     background: #FCA311;
     border: 2px solid white;
 }
+.dark-mode #main_vav li .nav-link{
+    background: #FCA311 !important;
+    border: 0px solid white ;
+    padding: 10px 14px 10px 13px;
+    color: #14213D !important;
+    border-radius: 10px;
+}
+.dark-mode #main_vav_shop li .nav-link{
+    background: #FCA311 !important;
+    border: 0px solid white ;
+    padding: 10px 14px 10px 13px;
+    color: #14213D !important;
+    border-radius: 10px;
+}
+.dark-mode #main_vav_about li .nav-link{
+    background: #FCA311 !important;
+    border: 0px solid white ;
+    padding: 10px 14px 10px 13px;
+    color: #14213D !important;
+    border-radius: 10px;
+}
+.dark-mode #main_vav_contact li .nav-link{
+    background: #FCA311 !important;
+    border: 0px solid white ;
+    padding: 10px 14px 10px 13px;
+    color: #14213D !important;
+    border-radius: 10px;
+}
+.dark-mode #main_vav_feature li .nav-link{
+    background: #FCA311 !important;
+    border: 0px solid white ;
+    padding: 10px 14px 10px 13px;
+    color: #14213D !important;
+    border-radius: 10px;
+}
+.dark-mode #main_nav_team li .nav-link{
+    background: #FCA311 !important;
+    border: 0px solid white ;
+    padding: 10px 14px 10px 13px;
+    color: #14213D !important;
+    border-radius: 10px;
+}
+.dark-mode input::placeholder {
+    color: #14213D !important;
+} 
+.dark-mode #about_carosoul .active{
+    border: 0px solid red;
+    font-weight: 600;
+    background-color: black !important;
+    color: white !important;
+    border-radius: 10px;
+  }
+
+
+
+
 
 
 
@@ -1044,9 +1109,9 @@ body {
     position: relative; 
 }
 .about_img1{
-    width: 50%;
+    width: 40%;
     position: absolute;
-    left: 95px;
+    left: 42%;
     top: 20px;
     z-index: -1;
 
@@ -1094,8 +1159,8 @@ body {
 .about_img_platfrom{
     width: 100%;
     position: absolute;
-    left: -10px;
-    top: 20px;
+    left: 0px;
+    top: 30px;
     z-index: -1;
 }
 .platform{
@@ -1401,6 +1466,10 @@ body {
     height: 64px;
     border-radius: 80px;
 }
+.social-icons a{
+    text-decoration: none;
+    color: black;
+}
 
 .social-icons>i {
     opacity: 0;
@@ -1450,6 +1519,12 @@ body {
 	background: white;
 	margin:80px auto;
 	box-shadow: 1px 3px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    transform: scale(1.0);
+    transition: 0s;
+}
+.product-card:hover{
+    transform: scale(1.1);
 }
 
 .product-image{
@@ -1615,7 +1690,7 @@ body {
 .ifrmae_class iframe{
     width: 600px;
     height: 450px;
-    border: 1px solid red;
+    border: 0px solid red;
 }
 .nav-link{
     cursor: pointer !important;
@@ -1623,12 +1698,102 @@ body {
 
 /* visited link code  */
 .active{
-    color: black !important;
-    border: 1px solid red;
+    border: 0px solid red;
+    font-weight: 600;
+    background-color: #14213D;
+    color: white !important;
+    border-radius: 10px;
   }
-#nav-data li a{
-    color: #74747f !important; 
-  }
- #mentor_git img{
+
+  #mentor_git img{
     left: 30rem;
   }
+  #main_vav li:nth-child(1){
+    background-color: #FCA311;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    padding: 0px 15px 0px 15px;
+  }
+  #main_vav_shop li:nth-child(2){
+    background-color: #FCA311;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    padding: 0px 15px 0px 15px;
+  }
+  #main_vav_about li:nth-child(4){
+    background-color: #FCA311;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    padding: 0px 15px 0px 15px;
+  }
+  #main_vav_contact li:nth-child(6){
+    background-color: #FCA311;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    padding: 0px 15px 0px 15px;
+  }
+  #main_vav_feature li:nth-child(3){
+    background-color: #FCA311;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    padding: 0px 15px 0px 15px;
+  }
+  #main_nav_team li:nth-child(5){
+    background-color: #FCA311;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    padding: 0px 25px 0px 15px;
+  }
+  .product-front-image{
+    width: 109% !important;
+    margin: auto;
+    border: 0px solid red;
+    position: relative;
+    left: -11px;
+    border-radius: 10px 10px 0px 0px;
+  }
+  #about_carosoul .active{
+    border: 0px solid red;
+    font-weight: 600;
+    background-color: #F9F9F8 !important;
+    color: white !important;
+    border-radius: 10px;
+  }
+  #carouselExampleSlidesOnly .active{
+    border: 0px solid red;
+    font-weight: 600;
+    background-color: #F9F9F8 !important;
+    color: white !important;
+    border-radius: 10px;
+  }
+#count-words{
+    color: #FCA311;
+    
+}
+.singleproductimg{
+    width: auto;
+    height: 30rem;
+  }
+.close_icon{
+    width: 50px;
+    height: 30px;
+}
+

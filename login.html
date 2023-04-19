@@ -4,338 +4,162 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Radiance Attire</title>
+    <title>Radiance Attire | Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="image/favicon-32x32.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" 
-    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /*-----------------  GOOGLE FONTS  -----------------*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
-/*-----------------  VARIABLES  -----------------*/
-:root {
-    /* Colors */ 
-    --orange-color: #FCA311;
-    --white_color: rgb(255, 255, 255);
-    --linear_gradient: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
-    --black_color: rgb(0, 0, 0);
-    --success_color: rgb(138, 232, 90);
-    --danger_color: #FCA311;
-}
+        
 
-/*-----------------  Base  -----------------*/
 
-/*-----------------  Styling Start  -----------------*/
+        /* add padding on input */
 
-.form_box {
-    width: 38rem;
-    height: 55rem;
-    margin: 6% auto;
-    padding: 0.5rem;
-    color: var(--white_color);
-    border: 0.1rem solid rgba(255, 255, 255, 0.3);
-    background:rgba(255, 255, 255, 0.2);
-    border-radius: 1.6rem;
-    box-shadow: 0 0.4rem 3rem rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(0.5rem);
-    overflow: hidden;
-}
-.btn_box {
-    width: 22rem;
-    margin: 3.5rem auto;
-    position: relative;
-    box-shadow: 0 0 2rem 0.9rem #1b1f2955;
-    border-radius: 3rem;
-}
-.toggle_btn {
-    padding: 1rem 3rem;
-    cursor: pointer;
-    background: transparent;
-    border: 0;
-    outline: none;
-    position: relative;
-    transition: 0.3s;
-    font-weight: 600;
-}
-.toggle_btn:hover {
-    color: var(--white_color);
-}
-#btn {
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 11rem;
-    height: 100%;
-    border-radius: 3rem;
-    background:var(--orange-color);
-    transition: 0.5s;
-    font-weight: 600;
-}
-.social_icons {
-    text-align: center;
-}
-.social_icons .icon {
-    width: 3.6rem;
-    height: 3.6rem;
-    margin: 0 1.2rem;
-    font-size: 1.6rem;
-    box-shadow: 0 0 2rem 0.9rem #1b1f2955;
-    cursor: pointer;
-    border-radius: 50%;
-    color: var(--black_color);
-    padding-top: 1rem;
-    background: transparent;
-    transition: 0.2s;
-}
-.social_icons .icon:hover {
-    background: var(--orange-color);
-    color: var(--white_color);
-}
-.form_div {
-    width: 100%;
-    margin-top: 2rem;
-    position: relative;
-    height: 4.8rem;
-    margin-bottom: 2.4rem;
-}
-.input_group {
-    top: 18rem;
-    position: absolute;
-    width: 28rem;
-    transition: 0.5s;
-}
-.form_input {
-    font-size: 1.6rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    box-shadow: 0 0 2rem 0.9rem #1b1f2955;
-    border-radius: 0.8rem;
-    outline: none;
-    padding: 1.6rem;
-    background: transparent;
-    z-index: 1;
-    transition: 0.3s;
-}
-.form_label {
-    position: absolute;
-    left: 1.6rem;
-    top: 1.6rem;
-    padding: 0 0.4rem;
-    background-color: transparent;
-    color: var(--black_color);
-    font-size: 1.6rem;
-    transition: 0.3s;
-}
-.form_input:focus + .form_label {
-    top: -0.8rem;
-    left: 1rem;
-    color: var(--white_color);
-    font-size: 1rem;
-    font-weight: 500;
-    z-index: 10;
-    background-color: var(--orange-color);
-    border-radius: 1rem;
-    padding: 0 0.5rem;
-}
-.form_input:not(:placeholder-shown).form_input:not(:focus)+ .form_label {
-    top: -0.8rem;
-    left: 1rem;
-    font-size: 1rem;
-    font-weight: 500;
-    background-color: var(--orange-color);
-    border-radius: 1rem;
-    color: var(--white_color);
-    z-index: 10;
-}
-.form_input:focus {
-    border: 0.15rem solid var(--orange-color);
-}
-.submit_btn {
-    width: 85%;
-    position: relative;
-    padding: 1rem 3rem;
-    cursor: pointer;
-    display: block;
-    margin: auto;
-    background-color:transparent;
-    box-shadow: 0 0 2rem 0.9rem #1b1f2955;
-    border: 0;
-    outline: none;
-    overflow: hidden;
-    font-weight: 600;
-    border-radius: 3rem;
-    transition: 0.5s;
-}
-.submit_btn:hover {
-    color: var(--white_color);
-    background-color: var(--orange-color);
-}
-.submit_btn span {
-    position: absolute;
-    background: var(--white_color);
-    transform:translate(-50%, -50%);
-    border-radius: 50%;
-    animation: btnAnim 1s linear infinite;
-}
-@keyframes btnAnim {
-    0%{
-        width: 0rem;
-        height: 0rem;
-        opacity: 1;
-    }
-    100%{
-        width: 50rem;
-        height: 50rem;
-        opacity: 0;
-    }
-}
-.checkbox {
-    margin: 2rem 1rem 3rem 0.5rem;
-    box-shadow: 0 0 2rem 0.5rem #1b1f2955;
-    accent-color: var(--success_color);
-    cursor: pointer;
-}
-.check_text {
-    color: var(--black_color);
-    font-size: 1.2rem;
-    bottom: 5.8rem;
-    position: absolute;
-}
-#login {
-    left: 5rem;
-}
-#register {
-    left: 45rem;
-}
-.error-msg {
-    display: block;
-    position: relative;
-    font-size: 1.4rem;
-    padding-left: 0.5rem;   
-}
-.danger-color {
-    color: var(--danger_color);
-}
-.error {
-    border-color: var(--danger_color);
-}
-.valid {
-    color: var(--success_color);
-}
-.hide {
-    display: none;
-}
-.showbtn {
-    position: absolute;
-    right: 1rem;
-    top: 0.8rem;
-    width: 3.4rem;
-    font-size: 1.6rem;
-    color: var(--black_color);
-    height: 3.4rem;
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    z-index: 100;
-    justify-content: center;
-    align-items: center;
-}
-.password_validation {
-    margin-top: 1.5rem;
-}
-.password_validation ul li {
-    list-style: none;
-    color: var(--black_color);
-    font-size: 1.4rem;
-    padding-left: 0.5rem;   
-}
-.password_validation ul li.valid {
-    color: var(--white_color);
-}
-.password_validation ul li::before {
-    content:'\f192';
-    font-family: fontAwesome;
-    width: 2rem;
-    height: 1rem;
-    display: inline-flex;
-}
-.password_validation ul li.valid::before {
-    content: '\f00c';
-    color: var(--success_color);
-} 
-.popup {
-    width: 30rem;
-    background-color: var(--white_color);
-    border-radius: 1rem;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.1);
-    text-align: center;
-    padding: 0 3rem 3rem;
-    color: var(--black_color);
-    visibility: hidden;
-    transition: transform 0.4s, top 0.4s;
-}
-.popup .valicon {
-    font-size: 4rem;
-    height: 6rem;
-    width: 6rem;
-    padding: 1rem;
-    margin-top: -3rem;
-    color: var(--white_color);
-    background-color: var(--success_color);
-    border-radius: 50%;
-    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
-}
-.popup .erroricon {
-    font-size: 4rem;
-    height: 6rem;
-    width: 6rem;
-    padding: 1rem;
-    margin-top: -3rem;
-    color: var(--white_color);
-    background-color: var(--danger_color);
-    border-radius: 50%;
-    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
-}
-.popup h2 {
-    font-size: 2.5rem;
-    font-weight: 500;
-    margin: 3rem 0 1rem;
-}
-.popup .ok_btn {
-    margin-top: 3rem;
-    width: 100%;
-    padding: 1rem 0;
-    background-color: var(--success_color);
-    color: var(--white_color);
-    border: 0;
-    outline: none;
-    font-size: 1.8rem;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    font-weight: 500;
-    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
-}
-.open_popup {
-    visibility: visible;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1);
-}
+        .text-indent {
+            text-indent: .5rem;
+        }
 
- 
+
+        /* add password hide and show icon */
+
+        .password__icon {
+            position: absolute;
+            right: 0;
+            padding: 15px 20px;
+            cursor: pointer;
+        }
+
+
+        /* backgroun grey */
+
+        .bg-grey-light {
+            background: #f0f0f0;
+        }
+
+        .bg-grey-light:focus {
+            background: #f0f0f0;
+        }
+
+        @media (min-width: 1024px) {
+            body {
+                overflow-y: hidden;
+            }
+
+            /* add circle blue background */
+            .ball {
+                overflow: hidden;
+                transition: margin 1s;
+                width: 600px;
+                height: 600px;
+            }
+
+            .ball.login {
+                margin-left: 50%;
+                margin-top: 5%;
+            }
+
+            .ball.register {
+                margin-left: 14%;
+                margin-top: 6%;
+            }
+
+            /* bouncing effect */
+            .bounce {
+                animation: bounce 2s infinite alternate;
+                -webkit-animation: bounce 2s infinite alternate;
+            }
+
+            @keyframes bounce {
+                from {
+                    transform: translateY(0px);
+                }
+
+                to {
+                    transform: translateY(-35px);
+                }
+            }
+
+            @-webkit-keyframes bounce {
+                from {
+                    transform: translateY(0px);
+                }
+
+                to {
+                    transform: translateY(-35px);
+                }
+            }
+
+            /* register form active */
+            .register__form.active {
+                margin-left: 10% !important;
+                opacity: 1;
+            }
+
+            /* login form active */
+            .login__form.active {
+                opacity: 1;
+                margin-left: 10% !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container .col-12.p-5 {
+                padding: 0px !important;
+            }
+
+            body {
+                overflow-x: hidden;
+            }
+        }
+
+
+        /* register default */
+
+        .register__form {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            margin-left: -100%;
+            opacity: 0;
+            transition: margin 1s, opacity .5s;
+            z-index: 1;
+        }
+
+
+        /* register form active */
+
+        .register__form.active {
+            margin-left: 0%;
+            opacity: 1;
+        }
+
+
+        /* login form default */
+
+        /* .login__form {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            margin-left: -100%;
+            opacity: 0;
+            transition: margin 1s, opacity .5s;
+            z-index: 1;
+        } */
+
+
+        /* login form active */
+
+        /* .login__form.active {
+            opacity: 1;
+            margin-left: 0%;
+        } */
     </style>
 </head>
 
@@ -346,41 +170,46 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="index.html">
-                    <div class="col-md-2">
-                        <div class="row pt-0">
-                            <div class="col-12">
-                                <p class="fs-5"><b class="radiance">RADIANCE </b> <span class="radianece_color_hedaer">ATTIRE</span></p>
+                    <a class="navbar-brand" href="index.html">
+                        <div class="col-md-2">
+                            <div class="row pt-0">
+                                <div class="col-12">
+                                    <p class="fs-5"><b class="radiance">RADIANCE </b> <span
+                                            class="radianece_color_hedaer">ATTIRE</span></p>
+                                </div>
                             </div>
                         </div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse nav_padding " id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-0 mb-lg-0" id="main_vav">
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold text-dark text-uppercase text-center"
+                                    href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold text-dark text-uppercase" href="shop.html">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold text-dark text-uppercase" href="features.html">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold text-dark text-uppercase" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold text-dark text-uppercase teamdata" href="team.html">Team
+                                    <span class="new_svg"></span> </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold text-dark text-uppercase" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+
                     </div>
-                  </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse nav_padding " id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-0 mb-lg-0" id="nav-data">
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold text-dark text-uppercase active"  href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold text-dark text-uppercase" href="shop.html">Shop</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold text-dark text-uppercase"  href="featires.html">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold text-dark text-uppercase"  href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold text-dark text-uppercase teamdata"  href="team.html">Team <span class="new_svg"></span> </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold text-dark text-uppercase"  href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                    
-                  </div>
                 </div>
                 <div class="col-md-2 head_icon">
                     <div class="row pt-2">
@@ -400,135 +229,221 @@
                         </div>
                     </div>
                 </div>
-              </nav>
+            </nav>
         </div>
-         <!-- ------------------ nav bar is closed is here------------------------ -->
+        <!-- ------------------ nav bar is closed is here------------------------ -->
     </div>
 
     <!-- ---------login section is here ----------------------- -->
-    <div class="container-fluid pt-3 pb-5">
-        <div class="container">
-            
-            <div class="row">
-                <div class="col-12 col-md-6 col-sm-12 col-lg-6">
-                    <div class="row">
-                        <div class="col-12 fetature_expect">Easily Login and Sign Up Here</div>
-                        <div class="col-12 fetature_expect2">Just 2 Click and Become a family member ... we are still waiting fro you</div>
-                        <div class="col-12 text-center">
-                            <button class="sign1">Visit Shop Now</button>
+     <div class="container-fluid">
+        <div class="">
+            <div class="">
+                    <!-- yellow circle background -->
+<div class="d-none d-md-block ball login position-absolute rounded-circle"
+style="background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(252,163,17,1) 90%);"></div>
+
+<!-- Login Section -->
+<div class="container login__form active">
+<div class="row vh-100 w-100 align-self-center">
+    <div class="col-12 col-lg-6 col-xl-6 px-5">
+        <div class="row vh-100">
+            <div class="col align-self-center p-5 w-100">
+                <h3 class="fw-bolder">WELCOME BACK !</h3>
+                <p class="fw-lighter fs-6">Don't have an account, <span id="signUp" role="button"
+                        class="text-primary fw-bolder">Sign Up</span></p>
+                <!-- form login section -->
+                <form action="" class="mt-5">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Email</label>
+                        <input type="email"
+                            class="email form-control text-indent shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3"
+                            placeholder="name@example.com" required>
+                    </div>
+                    <!-- display email error -->
+                    <div class="error text-danger fw-bolder emailMissing"></div>
+                    <div class="error text-danger fw-bolder emailError"></div>
+
+
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Password</label>
+                        <div class="d-flex position-relative">
+                            <input type="password"
+                                class="form-control text-indent auth__password shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3"
+                                required>
+                            <span class="password__icon text-primary fs-4 fw-bold bi bi-eye-slash"></span>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-6 col-sm-12 col-lg-6 fetsec">
-                    <video loop autoplay muted controls class="product_feature">
-                    <source src="image/sign.mp4" type="video/mp4" >
-                    </video>
+                    <div class="col text-center">
+                        <!-- <button type="submit"
+                            class="btn btn-outline-dark btn-lg rounded-pill mt-4 w-100">Login</button> -->
+                        <input type="submit"
+                            class="submitButton btn btn-outline-dark btn-lg rounded-pill mt-4 w-100"
+                            value="Login">
+                    </div>
+                </form>
+                <p class="mt-5 text-center">Or Sign in with social platforms</p>
+                <div class="row text-center">
+                    <div class="col mt-3">
+                        <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
+                                class="bi bi-facebook fs-5"></i></a>
+                    </div>
+                    <div class="col mt-3">
+                        <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
+                                class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                    <div class="col mt-3">
+                        <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
+                                class="bi bi-twitter fs-5"></i></a>
+                    </div>
+                    <div class="col my-3">
+                        <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
+                                class="bi bi-google fs-5"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-
-
-       <!-- ------ foot code is here---- -->
-       <div class="row pt-5">
-        <div class="col-12  col-md-12 col-sm-12 col-lg-12 text-center  key_features">Login and Registration NOW</div>
-        <div class="col-12  col-md-12 col-sm-12 col-lg-12 key_features2"></div>
-        <div class="col-12  col-md-12 col-sm-12 col-lg-12 text-center pt-3 fs-3">We are Happy to reach us to you</div>
     </div>
-       <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="form_box">
-                    <!---------------  Toggle Buttons For Login & Register Form --------------------->
-                    <div class="btn_box">
-                        <div id="btn"></div>
-                        <button type="button" class="toggle_btn" onclick="login()">Log in</button>
-                        <button type="button" class="toggle_btn" onclick="register()">Register</button>
-                    </div>
-                    <!---------------  Social Icons --------------------->
-                    <div class="social_icons">
-                        <a href=""><i class="fa-brands fa-google icon"></i></a>
-                        <a href=""><i class="fa-brands fa-facebook-f icon"></i></a>
-                        <a href=""><i class="fa-brands fa-twitter icon"></i></a>
-                    </div>
-                    <!---------------  Login Form --------------------->
-                    <form id="login" class="input_group">
-                        <div class="form_div">
-                            <input type="text" class="form_input" placeholder=" " autocomplete="off" required>
-                            <label for="" class="form_label">User Name</label>
-                        </div>
-                        <div class="form_div">
-                            <input type="password" class="form_input" placeholder=" " autocomplete="off" required>
-                            <label for="" class="form_label">Password</label>
-                        </div>
-                        <input type="checkbox" class="checkbox"><span class="check_text">Remember Password</span>
-                        <button type="submit" class="submit_btn">Log in</button>
-                    </form>
-                    <!---------------  End Login Form --------------------->
-                    <!---------------  Register Form --------------------->
-                    <form id="register" class="input_group">
-                        <div class="form_div">
-                            <input type="text" id="user_name_input" name="user_name_input" class="form_input" placeholder=" " autocomplete="off" required>
-                            <label for="user_name_input" class="form_label">User Name</label>
-                        </div>
-                            <span id="user_name_error" class="hide danger-color error-msg">Invalid Input</span>
-                            <span id="user_name_empty" class="hide danger-color error-msg">User Name Can not Be Empty</span>
-                        <div class="form_div">
-                            <input type="email" id="email_input" class="form_input" placeholder=" " autocomplete="off" required>
-                            <label for="email_input" class="form_label">Email</label>
-                        </div>
-                            <span id="email_error" class="hide danger-color error-msg">Invalid Email</span>
-                            <span id="email_empty" class="hide danger-color error-msg">Email Can not Be Empty</span>
-                        <div class="form_div">
-                            <input type="tel" id="phone_input" class="form_input" placeholder=" " autocomplete="off" required>
-                            <label for="phone_input" class="form_label">Phone</label>
-                        </div>
-                            <span id="phone_error" class="hide danger-color error-msg">Phone Number Should Have 10 Digits</span>
-                            <span id="phone_empty" class="hide danger-color error-msg">Phone Can not Be Empty</span>
-                        <div class="form_div">
-                            <input type="password" id="password_input" class="form_input" onkeyup="passwordvalidation(this.value)" placeholder=" " autocomplete="off" required>
-                            <label for="password_input" class="form_label">Password</label>
-                            <!---------------  Password Hide & Show Icon  --------------------->
-                            <span class="showbtn"><i id="showbtn" class="fa-solid fa-eye"></i></ion-icon></span>
-                        </div>
-                            <span id="password_error" class="hide danger-color error-msg">Password Should Have Letters, Special Symbols & Numbers</span>
-                            <span id="password_empty" class="hide danger-color error-msg">Password Can not Be Empty</span>
-                            <!---------------  Password Validation  --------------------->
-                            <div class="password_validation">
-                                <ul>
-                                    <li id="lowChar">At least one lowercase chracter</li>
-                                    <li id="upChar">At least one uppercase chracter</li>
-                                    <li id="number">At least one number</li>
-                                    <li id="speChar">At least one special chracter</li>
-                                    <li id="eigChar">At least 8 chracters</li>
-                                </ul>
-                            </div>
-                            <!---------------  End Password Validation  --------------------->
-                        <input type="checkbox" class="checkbox"><span class="check_text">I agree to the terms & conditions</span>
-                        <button type="submit" id="submit_btn" class="submit_btn">Register</button>              
-                    </form>
-                    <!---------------  End Register Form --------------------->
-                </div>  
+    <div class="d-none d-lg-block col-lg-6 col-xl-6 p-5">
+        <div class="row vh-100 p-5">
+            <div class="col align-self-center p-5 text-center">
+                <img src="assets/img/7a95e97086fbb1170c6d50d4a5996f2a.gif" class="bounce" alt="">
             </div>
-            </div>
-            <!---------------  Success & Error Popup --------------------->
-            <div class="popup" id="Valpopup">
-                <i class="fa-sharp fa-solid fa-check valicon"></i>
-                <h2>Register Successfully!</h2>
-                <button class="ok_btn" type="button" onclick="closevalPopup()">OK</button>
-            </div>
-            <div class="popup" id="errorpopup">
-                <i class="fa-solid fa-xmark erroricon"></i>
-                <h2>Something Wrong</h2>
-                <button class="ok_btn" type="button" onclick="closeerrorPopup()">OK</button>
-            </div>
-            <!---------------  End Success & Error Popup --------------------->
+        </div>
     </div>
+</div>
+</div>
 
-       <!-- ------footer code is closed here ---------- -->
-       </div>
+<!-- Register Section -->
+<div class="container register__form">
+<div class="row vh-100 w-100 align-self-center">
+    <div class="d-none d-lg-block col-lg-6 col-xl-6 p-5">
+        <div class="row vh-100 p-5">
+            <div class="col align-self-center p-5 text-center">
+                <img src="assets/img/register.png" class="bounce" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-6 col-xl-6 px-5">
+        <div class="row vh-100">
+            <div class="col align-self-center p-5 w-100">
+                <h3 class="fw-bolder">REGISTER HERE !</h3>
+                <p class="fw-lighter fs-6">Have an account, <span id="signIn" role="button"
+                        class="text-primary fw-bolder">Sign In</span></p>
+
+                <!-- Display success and error messages -->
+                <div id="successMessage" class="text-success fw-bolder" style="display: none;">Congratulations,
+                    Registration Completed!
+                </div>
+                <div id="errorMessage" class="text-warning fw-bolder" style="display: none;">
+                    <span>&#9888;</span> Error: Some Data Is
+                    Missing!</div>
+
+
+
+                <!-- form register section -->
+                <form action="" class="mt-5">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" id="name"
+                            class=" form-control text-indent shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3"
+                            placeholder="name">
+                    </div>
+                    <!-- display username error -->
+                    <div class="error text-danger fw-bolder" id="nameMissing"></div>
+
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Phone Number</label>
+                        <input id="phone" type="tel"
+                            class="form-control text-indent shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3"
+                            placeholder="Phone Number">
+                    </div>
+                    <!-- display phone number error -->
+                    <div class="error text-danger fw-bolder" id="phoneMissing"></div>
+                    <div class="error text-danger fw-bolder" id="phoneError"></div>
+
+
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Email</label>
+                        <input id="email" type="email"
+                            class=" form-control text-indent shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3"
+                            placeholder="name@example.com">
+                    </div>
+                    <!-- display email error -->
+                    <div class="error text-danger fw-bolder" id="emailMissing"></div>
+                    <div class="error text-danger fw-bolder" id="emailError"></div>
+
+
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <div class="d-flex position-relative">
+                            <input id="password" type="password"
+                                class="form-control text-indent auth__password shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3">
+                            <span class="password__icon text-primary fs-4 fw-bold bi bi-eye-slash"></span>
+                        </div>
+                    </div>
+                    <!-- Display password missing error -->
+                    <div class="error text-danger fw-bolder" id="passwordMissing"></div>
+
+
+                    <div class="mb-3">
+                        <label class="form-label">Confirm Password</label>
+                        <div class="d-flex position-relative">
+                            <input id="passwordConfirm" type="password"
+                                class="form-control text-indent auth__password shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3">
+                            <span class="password__icon text-primary fs-4 fw-bold bi bi-eye-slash"></span>
+                        </div>
+                    </div>
+                    <!-- display confirm password error -->
+                    <div class="error text-danger fw-bolder" id="confirmPasswordMissing"></div>
+                    <div class="error text-danger fw-bolder" id="passwordConfirmError"></div>
+
+
+                    <div class="mb-3 form-check checkBox">
+                        <input type="checkbox" class="form-check-input" id="checkbox">
+                        <label class="form-check-label" for="exampleCheck1">I agree with terms &
+                            conditions.</label>
+                    </div>
+                    <!-- display check box error message -->
+                    <div class="error text-danger" id="checkboxError"></div>
+
+                    <div class="col text-center">
+                        <input type="button"
+                            class="submitButton btn btn-outline-dark btn-lg rounded-pill mt-4 w-100"
+                            value="Sign Up">
+                    </div>
+                </form>
+                <p class="mt-5 text-center">Or Sign in with social platforms</p>
+                <div class="row text-center">
+                    <div class="col mt-3">
+                        <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
+                                class="bi bi-facebook fs-5"></i></a>
+                    </div>
+                    <div class="col mt-3">
+                        <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
+                                class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                    <div class="col mt-3">
+                        <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
+                                class="bi bi-twitter fs-5"></i></a>
+                    </div>
+                    <div class="col my-3">
+                        <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
+                                class="bi bi-google fs-5"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+            </div>
+        </div>
+     </div>
+
 
     <!-- ----------login section is closed here --------------- -->
-          
+
     <!-- ----------------footer section is started here ----------------------- -->
     <!-- Footer -->
     <div class="container-fluid1 nsti" style="background-color: #23242a;">
@@ -541,8 +456,9 @@
                 <div class="col-md-5 col-lg-5 col-sm-12 col-12">
                     <div class="row">
                         <div class="col-md-8 col-lg-8 col-sm-7 col-7">
-                           <input type="text" name="" id="" class="form-control footer_from" placeholder="Enter your email address">
-                        </div> 
+                            <input type="text" name="" id="" class="form-control footer_from"
+                                placeholder="Enter your email address">
+                        </div>
                         <div class="col-md-4 col-lg-4 col-sm-5 col-5">
                             <button type="button" class="btn btn_footer_started">Get Started</button>
                         </div>
@@ -567,11 +483,13 @@
                             <h5 class="text-uppercase mb-4">About company</h5>
 
                             <p>
-                                Radiance Attire is a premium clothing brand that offers an extensive collection of stylish and trendy apparel for men and women.
+                                Radiance Attire is a premium clothing brand that offers an extensive collection of
+                                stylish and trendy apparel for men and women.
                             </p>
 
                             <p>
-                                Our brand is dedicated to providing our customers with high-quality clothing that radiates elegance and sophistication.
+                                Our brand is dedicated to providing our customers with high-quality clothing that
+                                radiates elegance and sophistication.
                             </p>
 
                             <div class="mt-4">
@@ -621,7 +539,8 @@
                                         class="ms-2">+ 91 9100123456</span>
                                 </li>
                                 <li class="mb-3">
-                                    <span class="fa-li"><i class="bi bi-reception-3 icon_li"></i></span><span class="ms-2">+ 91
+                                    <span class="fa-li"><i class="bi bi-reception-3 icon_li"></i></span><span
+                                        class="ms-2">+ 91
                                         9100123457</span>
                                 </li>
                             </ul>
@@ -651,118 +570,136 @@
                         </div>
                         <!--Grid column-->
                     </div>
-                    <!--Grid row-->      
+                    <!--Grid row-->
                 </div>
-                <!-- Grid container -->              
+                <!-- Grid container -->
             </footer>
-            
+
         </div>
     </div>
 
     <!-- Footer -->
 
     <!-- new footer is here------ -->
-    
+
     <footer>
-        <div class="container-fluid1 nav_foot_border  bg-dark ">  
-            
-           
+        <div class="container-fluid1 nav_foot_border  bg-dark ">
+
+
             <div class="container pt-4  pb-4">
                 <div class="row">
                     <div class="col-6 col-lg-2 col-md-2 col-sm-5 site_foot"><a href="about.html">About</a></div>
                     <div class="col-6 col-lg-2 col-md-2 col-sm-5 site_foot"><a href="contact.html">Careers</a></div>
-                    <div class="col-6 col-lg-2 col-md-2 col-sm-5 site_foot"><a href="featires.html">Press and Media</a></div>
+                    <div class="col-6 col-lg-2 col-md-2 col-sm-5 site_foot"><a href="featires.html">Press and Media</a>
+                    </div>
                     <div class="col-6 col-lg-2 col-md-2 col-sm-5 site_foot"><a href="team.html">Enterprise</a></div>
                     <div class="col-6 col-lg-2 col-md-2 col-sm-5 site_foot"><a href="contact.html">Sitemap</a></div>
                     <div class="col-6 col-lg-2 col-md-2 col-sm-5 site_foot"></div>
-                        
-                    </div>
+
                 </div>
-            
+            </div>
+
             <div class="nav_foot_border"></div>
             <div class="container">
                 <div class="row pt-3 pb-4">
                     <div class="col-6 col-lg-3 col-md-3 col-sm-6">
                         <div class="row">
                             <div class="col-12 text-light fw-bold fs-3">RADIANCE ATTIRE</div>
-                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/home.svg" alt="" class="img-fluid"> <a href="index.html">Home</a></div>
-                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/shop.svg" alt="" class="img-fluid"><a href="shop.html"> Shop</a></div>
-                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="feat.svg" alt="" class="img-fluid"><a href="featires.html"> Features</a></div>
-                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/about.svg" alt="" class="img-fluid"><a href="about.html"> About
-                            </a></div>
-                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/team.svg" alt="" class="img-fluid"><a href="team.html"> Team</a></div>
-                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/contact.svg" alt="" class="img-fluid"><a href="contact.html"> Contact
-                            </a></div>
+                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/home.svg"
+                                    alt="" class="img-fluid"> <a href="index.html">Home</a></div>
+                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/shop.svg"
+                                    alt="" class="img-fluid"><a href="shop.html"> Shop</a></div>
+                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="feat.svg" alt=""
+                                    class="img-fluid"><a href="featires.html"> Features</a></div>
+                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/about.svg"
+                                    alt="" class="img-fluid"><a href="about.html"> About
+                                </a></div>
+                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/team.svg"
+                                    alt="" class="img-fluid"><a href="team.html"> Team</a></div>
+                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/contact.svg"
+                                    alt="" class="img-fluid"><a href="contact.html"> Contact
+                                </a></div>
                         </div>
                     </div>
                     <div class="col-6 col-lg-3 col-md-3 col-sm-6">
                         <div class="row">
                             <div class="col-12 text-light fw-bold fs-3">SUPPORT MEMBER</div>
-                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/store.svg" alt="" class="img-fluid"><a href="contact.html"> Store Locator</a></div>
-                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/staff.svg" alt="" class="img-fluid"><a href="team.html"> Support staff</a></div>
+                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/store.svg"
+                                    alt="" class="img-fluid"><a href="contact.html"> Store Locator</a></div>
+                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/staff.svg"
+                                    alt="" class="img-fluid"><a href="team.html"> Support staff</a></div>
 
                         </div>
                     </div>
                     <div class="col-6 col-lg-3 col-md-3 col-sm-6 company_daat ">
                         <div class="row">
                             <div class="col-12 text-light fw-bold fs-3">COMPANY</div>
-                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/service.svg" alt="" class="img-fluid"><a href="index.html"> Service</a></div>
-                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="carrer.svg" alt="" class="img-fluid"><a href="contact.html"> Career</a></div>
-                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/pricavy.svg" alt="" class="img-fluid"><a href="contact.html"> Privacy</a></div>
-                            
-                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/terme.svg" alt="" class="img-fluid"><a href="about.html"> Terms of Use</a></div>
-                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/affli.svg" alt="" class="img-fluid"><a href="featires.html"> Affiliates</a></div>
+                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/service.svg"
+                                    alt="" class="img-fluid"><a href="index.html"> Service</a></div>
+                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="carrer.svg" alt=""
+                                    class="img-fluid"><a href="contact.html"> Career</a></div>
+                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/pricavy.svg"
+                                    alt="" class="img-fluid"><a href="contact.html"> Privacy</a></div>
+
+                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/terme.svg"
+                                    alt="" class="img-fluid"><a href="about.html"> Terms of Use</a></div>
+                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/affli.svg"
+                                    alt="" class="img-fluid"><a href="featires.html"> Affiliates</a></div>
                         </div>
                     </div>
                     <div class="col-6 col-lg-3 col-md-3 col-sm-6 company_daat ">
                         <div class="row">
                             <div class="col-12 text-light fw-bold fs-3">CONTACT US</div>
-                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/mail.svg" alt="" class="img-fluid"><a href=""> support@radianceattire.org</a></div>
-                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/telephone.svg" alt="" class="img-fluid"><a href="">  +919828521478</a></div>
-                        
-                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/address.svg" alt="" class="img-fluid"><a href=""> Paota C Road Jodhpur</a></div>
-                            
+                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/mail.svg"
+                                    alt="" class="img-fluid"><a href=""> support@radianceattire.org</a></div>
+                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img
+                                    src="image/telephone.svg" alt="" class="img-fluid"><a href=""> +919828521478</a>
+                            </div>
+
+                            <div class="col-12 text-light fs-5 pt-2 text-warning shop_ftt"><img src="image/address.svg"
+                                    alt="" class="img-fluid"><a href=""> Paota C Road Jodhpur</a></div>
+
                         </div>
                     </div>
                 </div>
             </div>
-           <div class="nav_foot_border"></div>
+            <div class="nav_foot_border"></div>
             <div class="container pt-3">
                 <div class="row">
                     <div class="col-12 col-lg-4 col-md-4 col-sm-12">
                         <div class="row">
                             <div class="col-12 text-light fw-bold fs-3">STORE LOCATOR</div>
                             <div class="row">
-                                
+
                                 <div class="col-12 pt-4 pb-4">
                                     <button type="button" class="find_store">FIND A STORE</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4 col-md-4 col-sm-12 text-light fw-bold fs-3"> 
+                    <div class="col-12 col-lg-4 col-md-4 col-sm-12 text-light fw-bold fs-3">
                         <div class="row">
                             <div class="col-12 text-light fw-bold fs-3">FOLLOW US</div>
                             <div class="row">
                                 <div class="col-12 pt-4 pb-4">
-                                   <div class="row">
-                                    <div class="col-2 "><i class="bi bi-facebook icon_footer "></i></div>
-                                    <div class="col-2 "><i class="bi bi-twitter icon_footer"></i></div>
-                                    <div class="col-2 "><i class="bi bi-linkedin icon_footer"></i></div>                                   
-                                    <div class="col-2 "><i class="bi bi-instagram icon_footer"></i></div>
-                                   </div>
+                                    <div class="row">
+                                        <div class="col-2 "><i class="bi bi-facebook icon_footer "></i></div>
+                                        <div class="col-2 "><i class="bi bi-twitter icon_footer"></i></div>
+                                        <div class="col-2 "><i class="bi bi-linkedin icon_footer"></i></div>
+                                        <div class="col-2 "><i class="bi bi-instagram icon_footer"></i></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4 col-md-4 col-sm-12 text-light fw-bold fs-3"> 
+                    <div class="col-12 col-lg-4 col-md-4 col-sm-12 text-light fw-bold fs-3">
                         <div class="row">
-                            <div class="col-12 text-light fw-bold fs-3">LANGUAGE TRASLATE</div>
+                            <div class="col-12 text-light fw-bold fs-3">LANGUAGE TRANSLATE</div>
                             <div class="row pt-4">
                                 <div class="col-12 ">
                                     <div id="google_translate_element" class="fw-bold "></div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -778,269 +715,20 @@
         </div>
     </footer>
 
-   <!-- new footer is closed  -->
+    <!-- new footer is closed  -->
     <!-- ---------back to top button is here------ -->
     <button type="button" class="btn btn-warning btn-floating btn-lg step" style="color: black;" id="btn-back-to-top">
         <i class="bi bi-arrow-up"></i>
     </button>
-    <!-- ------back to top button is closed here -------------- --> 
+    <!-- ------back to top button is closed here -------------- -->
 
-    
+
     <script>
-        var log = document.getElementById("login");
-var reg = document.getElementById("register");
-var btn = document.getElementById("btn");
-var box = document.querySelector(".form_box");
 
-function register(){
-    log.style.left = "-40rem";
-    reg.style.left = "5rem";
-    btn.style.left = "11rem";
-    box.style.height = "73rem";   
-}
-
-function login(){
-    log.style.left = "5rem";
-    reg.style.left = "45rem";
-    btn.style.left = "0";
-    box.style.height = "55rem";     
-}
-/* --------------- End Login & Register Button Function --------------------- */
-
-/* --------------- Button Ripples Effect --------------------- */
-const submitBtns = document.querySelectorAll('.submit_btn');
-    submitBtns.forEach(submitBtn => {
-    submitBtn.addEventListener('click', function(e) {
-            let x = e.clientX - e.target.getBoundingClientRect().left;
-            let y = e.clientY - e.target.getBoundingClientRect().top;
-
-            let ripples = document.createElement('span');
-            ripples.style.top = y + 'px';
-            ripples.style.left = x + 'px';
-            this.appendChild(ripples);
-
-            setTimeout(() => {
-                ripples.remove()
-            },1000);
-        })
-    })
-/* --------------- End Button Ripples Effect --------------------- */
-
-/* --------------- Register Form Validation --------------------- */  
-
-//User Name
-let userNameInput = document.getElementById("user_name_input");
-let userNameError = document.getElementById("user_name_error");
-let userNameEmpty = document.getElementById("user_name_empty");
-
-//Email
-let emailInput = document.getElementById("email_input");
-let emailError = document.getElementById("email_error");
-let emailEmpty = document.getElementById("email_empty");
-
-//Phone
-let phoneInput = document.getElementById("phone_input");
-let phoneError = document.getElementById("phone_error");
-let phoneEmpty = document.getElementById("phone_empty");
-
-//Password
-let passwordInput = document.getElementById("password_input");
-let passwordError = document.getElementById("password_error");
-let passwordEmpty = document.getElementById("password_empty");
-let showbtn = document.getElementById("showbtn");
-
-//Submit
-let regiterBtn = document.getElementById("submit_btn");
-
-//Valid
-let validCls = document.getElementsByClassName("valid");
-let invalidCls = document.getElementsByClassName("error");
-
-
-//User Name Verification
-const textVerify = (text) => {
-const regex = /^[a-zA-Z]{3,}$/;
-return regex.test(text);
-};
-  
-//Email verification
-const emailVerify = (input) => {
-const regex = /^[a-z0-9_]+@[a-z]{3,}\.[a-z\.]{3,}$/;
-return regex.test(input);
-};
-
-//Phone number verification
-const phoneVerify = (number) => {
-const regex = /^[0-9]{10}$/;
-return regex.test(number);
-};
-
-//Password Verification
-const passwordVerify = (password) => {
-const regex =
-/^(?=.+[a-z])(?=.+[A-Z])(?=.+[0-9])(?=.+[\$\%\^\&\!@\#\*\(\)\+\=\?\>\<])/;
-return regex.test(password) && password.length >= 8;
-};
-
-//Password Validation
-let vallowChar = document.getElementById('lowChar');
-let valupChar = document.getElementById('upChar');
-let valnumber = document.getElementById('number');
-let valspeChar = document.getElementById('speChar');
-let valeigChar = document.getElementById('eigChar');
-
-function passwordvalidation(data){
-const lowChar = RegExp('(?=.*[a-z])');
-const upChar = RegExp('(?=.*[A-Z])');
-const number = RegExp('(?=.*[0-9])');
-const speChar = RegExp('(?=.*[!@#\$%\^&\*])');
-
-if(lowChar.test(data)){
-  vallowChar.classList.add('valid');
-}else{
-  vallowChar.classList.remove('valid');
-}
-
-if(upChar.test(data)){
-  valupChar.classList.add('valid');
-}else{
-  valupChar.classList.remove('valid');
-}
-
-if(number.test(data)){
-  valnumber.classList.add('valid');
-}else{
-  valnumber.classList.remove('valid');
-}
-
-if(speChar.test(data)){
-  valspeChar.classList.add('valid');
-}else{
-  valspeChar.classList.remove('valid');
-}
-
-if(data.length >= 8){
-  valeigChar.classList.add('valid');
-}else{
-  valeigChar.classList.remove('valid');
-}
-}
-//End Password Validation
-
-//Hide & Show Password  
-showbtn.onclick = function(){
-  if(passwordInput.value.length >= 1){
-  if (passwordInput.type === 'password'){
-     passwordInput.setAttribute('type', 'text');
-     showbtn.classList.remove("fa-eye")
-     showbtn.classList.add("fa-eye-slash")
-   } else {
-    passwordInput.setAttribute('type', 'password');
-    showbtn.classList.remove("fa-eye-slash")
-    showbtn.classList.add("fa-eye")
-   }
-  }
-}
-
-  const emptyUpdate = (inputReference, emptyErrorReference, otherErrorReference) => {
-    if (!inputReference.value) {
-      emptyErrorReference.classList.remove("hide");
-      otherErrorReference.classList.add("hide");
-      inputReference.classList.add("error");
-    } else {
-      emptyErrorReference.classList.add("hide");
-    }
-  };
-  
-  const errorUpdate = (inputReference, errorReference) => {
-    errorReference.classList.remove("hide");
-    inputReference.classList.remove("valid");
-    inputReference.classList.add("error");
-  };
-  
-  const validInput = (inputReference) => {
-    inputReference.classList.remove("error");
-    inputReference.classList.add("valid");
-  };
-  
-  //User Name
-  userNameInput.addEventListener("input", () => {
-    if (textVerify(userNameInput.value)) {
-      userNameError.classList.add("hide");
-      validInput(userNameInput);
-    } else {
-      errorUpdate(userNameInput, userNameError);
-      emptyUpdate(userNameInput, userNameEmpty, userNameError);
-    }
-  }); 
-  
-  //Email
-  emailInput.addEventListener("input", () => {
-    if (emailVerify(emailInput.value)) {
-      emailError.classList.add("hide");
-      validInput(emailInput);
-    } else {
-      errorUpdate(emailInput, emailError);
-      emptyUpdate(emailInput, emailEmpty, emailError);
-    }
-  });
-
-  //Phone
-  phoneInput.addEventListener("input", () => {
-    if (phoneVerify(phoneInput.value)) {
-      phoneError.classList.add("hide");
-      validInput(phoneInput);
-    } else {
-      errorUpdate(phoneInput, phoneError);
-      emptyUpdate(phoneInput, phoneEmpty, phoneError);
-    }
-  });
-  
-  //Password
-  passwordInput.addEventListener("input", () => {
-    if (passwordVerify(passwordInput.value)) {
-      passwordError.classList.add("hide");
-      validInput(passwordInput);
-    } else {
-      errorUpdate(passwordInput, passwordError);
-      emptyUpdate(passwordInput, passwordEmpty, passwordError);
-    }
-  });
-    
-  //Submit button
-  regiterBtn.addEventListener("click", function(event){
-    event.preventDefault();
-    if (invalidCls.length == 0 && validCls.length == 9){
-      showvalPopup();
-    } else {
-      showerrorPopup();
-    }
-  });
-
-/* --------------- End Register Form Validation --------------------- */  
-
-/* --------------- Success & Error Popup --------------------- */  
-
-let Valpopup = document.getElementById("Valpopup");
-let errorpopup = document.getElementById("errorpopup");
-
-function showvalPopup(){
-  Valpopup.classList.add("open_popup");
-};
-function showerrorPopup(){
-  errorpopup.classList.add("open_popup");
-};
-function closevalPopup(){
-  Valpopup.classList.remove("open_popup");
-  window.location.reload();
-};
-function closeerrorPopup(){
-  errorpopup.classList.remove("open_popup");
-};
-
-/* --------------- End Success & Error Popup --------------------- */  
+        /* --------------- End Success & Error Popup --------------------- */
     </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

@@ -37,7 +37,19 @@ $(document).ready(function () {
       $.each($(".dp_item"), function (index, dp_item) {
         $(dp_item).attr("data-position", index + 1);
       });
-    });
+    }); 
+    //self code is here
+  
+
+     let a = document.getElementById('dp-dots').getElementsByTagName('li');
+
+     console.log(a.length)
+     for (var i = 1; i < a.length; i++) {
+      console.log(i)
+        
+  
+     }
+    //self code is closed
   
     $("body").on("click", "#dp-slider .dp_item:not(:first-child)", function () {
       var get_slide = $(this).attr("data-class");
@@ -75,8 +87,8 @@ fetch("https://dummyjson.com/products?offset=0&limit=100")
   percentagevalue = Number.parseInt(value2.price-percentagevalue);
     ihtml = ""
     for (item in value2) {   
-      
-      
+      item = Math.floor(Math.random()*value2.length)
+ 
     ihtml += `
     <div class="product-card">
     <a class="aaa" target="_blank"">
@@ -768,84 +780,119 @@ function navSearchFunction() {
     }
 }
 
-function singleiddescription(data){
-  let myproductid = data;
-  let myproductdetail = '';
-  fetch(`https://dummyjson.com/products/${myproductid}`)
-    .then(response => response.json())    
-    .then(element=>  {   
-      let percentagevalue= element.price/element.discountPercentage;
-      percentagevalue = Number.parseInt(element.price-percentagevalue);
-      console.log(element)
-    
-     myproductdetail+=`     
-     <div class="product-card">
-     <a class="aaa" target="_blank"">
-       <div class="product-front-image">
-         <div class="front-image">
-           <img alt="" class="img-fluid" src="${element.thumbnail}" onclick="singleproductdetail()>
-         </div>
-         <div class="owl-slider">
-           <div id="carousel3" class="owl-carousel product-slider">
-             <div class="product-image">
-               <img alt="" src="${element.images[0]}">
-             </div>
-             <div class="product-image">
-               <img alt="" src="${element.images[1]}">
-             </div>
-           </div>
-         </div>
-        <div class="row">
-         <div class=" col-12">
-                   <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                       <div class="carousel-inner">
-                         <div class="carousel-item active">
-                           <img src="${element.images[2]}" class="d-block w-100 carosal_images" alt="No Api Images">
-                         </div>
-                         <div class="carousel-item">
-                           <img src="${element.images[0]}" class="d-block w-100" alt="...">
-                         </div>
-                         <div class="carousel-item">
-                           <img src="${element.images[1]}" class="d-block w-100" alt="...">
-                         </div>   
-                       </div>
-                     </div>
-               </div>
-         </div>
-         <div class="product-like">
-           <svg xmlns="http://www.w3.org/2000/svg" class="_2oLiqr" width="28" height="28" viewBox="0 0 20 16">
-             <path
-               d="M8.695 16.682C4.06 12.382 1 9.536 1 6.065 1 3.219 3.178 1 5.95 1c1.566 0 3.069.746 4.05 1.915C10.981 1.745 12.484 1 14.05 1 16.822 1 19 3.22 19 6.065c0 3.471-3.06 6.316-7.695 10.617L10 17.897l-1.305-1.215z"
-               class="_35Y7Yo" stroke="#FFF" fill-rule="evenodd" opacity=".9"></path>
-           </svg>
-         </div>
-       </div>
-     </a>
-     <div class="product-details">
-       <div class="brand-name">${element.brand}</div>
-       <a class="brand-desc" title="">${element.title} </a>
-       <div class="color-details">Grey</div>
-       
-       <a class="" target="_blank" href="#">
-         <div class="price-info-sec">
-           <div class="price">$${percentagevalue} </div>
-           <div class="cut-off">$${element.price}</div>
-           <div class="discount-percent"><span>${Math.ceil(element.discountPercentage)}% off</span></div>
-         </div>
-       </a>
-     </div>
-   </div>
-   <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-       
-      </div>
-       
-    `
 
-    thisismydetail.innerHTML=myproductdetail
+
+
+function singleiddescription(data) {
+  let myproductid = data;
+  let myproductdetail = "";
+  fetch(`https://dummyjson.com/products/${myproductid}`)
+    .then((response) => response.json())
+    .then((element) => {
+      let percentagevalue = element.price / element.discountPercentage;
+      percentagevalue = Number.parseInt(element.price - percentagevalue);
+    
+
+      myproductdetail += ` 
+      <div class="container d-flex   ">
+      <div class="row  m-4 ">
+          <div class="col">
+              <div>
+                  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                          <div class="carousel-item active" >
+                              <img src="${element.images[1]}" class="d-block rounded img-fluid singleproductimg "
+                                  alt="...">
+                          </div>
+                          <div class="carousel-item" >
+                              <img src="${element.images[0]}" class="d-block rounded img-fluid singleproductimg" alt="...">
+                          </div>
+                          <div class="carousel-item" >
+                              <img src="${element.images[2]}" class="d-block rounded img-fluid singleproductimg" alt="...">
+                          </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                          data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                          data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="col ">
+              <div class="text-end " onclick="clearquantityvalue()" data-bs-dismiss="modal"><i class="bi bi-x-lg link-warning icon-link-hover"></i></div>
+              <div class="text-start fs-2 mb-4">${element.title}</div>
+              <div class="d-flex align-content-start ">
+                  <span class="bi bi-star-fill "></span>
+                  <span class="bi bi-star-fill "></span>
+                  <span class="bi bi-star-fill "></span>
+                  <span class="bi bi-star-fill "></span>
+                  <span class="bi bi-star-half "></span>
+
+              </div>
+              <div class="text-start fs-4 mb-1">${element.brand}</div>
+
+              <div class="price-info-sec">
+                  <div class="price">$${Number.parseInt(
+                      element.price - element.price / element.discountPercentage
+                      )} </div>
+                  <div class="cut-off">$${element.price}</div>
+                  <div class="discount-percent"><span>${Math.ceil(
+                          element.discountPercentage
+                          )}% off</span></div>
+              </div>
+              <div>${element.description}</div>
+              <div>
+              <div class="col-lg-4">
+              <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="quantity-left-minus btn btn-danger btn-number" onclick="minus()"  data-type="minus" data-field="">
+                <span class="bi bi-dash-lg"></span>
+              </button>
+          </span>
+          <input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1" max="100">
+          <span class="input-group-btn">
+              <button type="button" class="quantity-right-plus btn btn-success btn-number" onclick="plus()" data-type="plus" data-field="">
+                  <span class="bi bi-plus-lg"></span>
+              </button>
+          </span>
+      </div>
+</div>
+              <div class="d-flex align-items-end ">
+              <button type="button" class="btn btn-warning m-3" onclick="clearquantityvalue()" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary m-3" >ADD TO CART <spna class="bi bi-cart4"></span></button>
+              </div>
+          </div>
+
+      </div>
+  </div>
+       
+    `;
+    
+
+      thisismydetail.innerHTML = myproductdetail;
+    });
+}
+let countquantity = 1;
+function plus(){
+  countquantity++;
+  quantity.value = countquantity;
   
-})
- 
+}
+function minus() {
+  if (countquantity > 1) {
+    countquantity--;
+    quantity.value = countquantity;
+
+  }
+}
+function clearquantityvalue(){
+  quantity.value = 0;
 }
 
 //user login data api
@@ -959,7 +1006,7 @@ function countWords(self) {
   var spaces = self.value.match(/\S+/g);
   var words = spaces ? spaces.length : 0;
 
-  document.getElementById("count-words").innerHTML = words + " words";
+  document.getElementById("count-words").innerHTML = 250-words + " Words Remaining";
 }
 //word counter is closed here
 
@@ -979,7 +1026,7 @@ fetch('gitteam.json')
                 <div class="col-5 team-images">
                 <img src="${value2[data].avatar_url}" class="img-fluid">
                 </div>
-                <div class="col text-center pt-5  mt-5 "><h3 class="fw-bold">${value2[data].login}</h3></div>
+                <div class="col text-center pt-5  mt-5 "><h3 class="fw-bold text-uppercase">${value2[data].name}</h3></div>
                 <div class="col text-center"><h5>${value2[data].bio}</h5></div>
                 <div class="col pt-3"> <p class="text-justify fs-5 text-center">A typical web development team looks like this: requirements analyst; Project Manager; UI/UX designer; web developer; QA Engineer</p> </div>
                 <div class="col  text-center "> <i class="bi bi-geo-alt-fill jodh-location"></i> <span class="fs-5 teamlo">Jodhpur(Rajasthan)</span></div>
@@ -996,14 +1043,12 @@ fetch('gitteam.json')
                 
                 <div class="profile-card-buttons mb-5">
                     <div class="profile-card-button">
-                        <span>contact me</span>
+                        <span>Let's Connect</span>
                         <div class="social-icons">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            
-                            <a href="${value2[data].repos_url}"><i class="fa-brands fa-github"></i></a>
-                            <i class="fa-brands fa-linkedin"></i>
+                        <a href="${value2[data].git_data}" ><i class="fa-brands fa-github"></i></a>         
+                        <a href="${value2[data].linkden_data}" ><i class="bi bi-linkedin"></i></a>
+                        <a href="${value2[data].port_data}"><i class="bi bi-file-earmark-person"></i></a>
+                        
                         </div>
                     </div>
                 </div>
@@ -1030,7 +1075,7 @@ fetch('gitteam.json')
                 <div class="col-5 team-images">
                 <img src="${value2[data].avatar_url}" class="img-fluid">
                 </div>
-                <div class="col text-center pt-5  mt-5 "><h3 class="fw-bold">${value2[data].login}</h3></div>
+                <div class="col text-center pt-5  mt-5 "><h3 class="fw-bold text-uppercase">${value2[data].name}</h3></div>
                 <div class="col text-center"><h5>${value2[data].bio}</h5></div>
                 <div class="col pt-3"> <p class="text-justify fs-5 text-center">A typical web development team looks like this: requirements analyst; Project Manager; UI/UX designer; web developer; QA Engineer</p> </div>
                 <div class="col  text-center "> <i class="bi bi-geo-alt-fill jodh-location"></i> <span class="fs-5 teamlo">Jodhpur(Rajasthan)</span></div>
@@ -1049,12 +1094,10 @@ fetch('gitteam.json')
                     <div class="profile-card-button">
                         <span>contact me</span>
                         <div class="social-icons">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            
+                            <a href="${value2[data].url}" ><i class="fa-brands fa-github"></i></a>         
+                            <a href="${value2[data].url}" ><i class="fa-brands fa-github"></i></a>
                             <a href="${value2[data].repos_url}"><i class="fa-brands fa-github"></i></a>
-                            <i class="fa-brands fa-linkedin"></i>
+                            <a href="${value2[data].blog}" ><i class="fa-brands fa-wordpress"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1077,4 +1120,44 @@ fetch('gitteam.json')
       });
  
     // data active bav bar is closed
+
+    //js code is here
+    const signUp = document.querySelector("#signUp");
+    const signIn = document.querySelector("#signIn");
+    const passwordIcon = document.querySelectorAll('.password__icon')
+    const authPassword = document.querySelectorAll('.auth__password')
+
+    // when click sign up button
+    signUp.addEventListener('click', () => {
+        document.querySelector('.login__form').classList.remove('active')
+        document.querySelector('.register__form').classList.add('active')
+        document.querySelector('.ball').classList.add('register')
+        document.querySelector('.ball').classList.remove('login')
+    });
+
+    // when click sign in button
+    signIn.addEventListener('click', () => {
+        document.querySelector('.login__form').classList.add('active')
+        document.querySelector('.register__form').classList.remove('active')
+        document.querySelector('.ball').classList.add('login')
+        document.querySelector('.ball').classList.remove('register')
+    });
+
+    // change hidden password to visible password
+    for (var i = 0; i < passwordIcon.length; ++i) {
+        passwordIcon[i].addEventListener('click', (i) => {
+            const lastArray = i.target.classList.length - 1
+            if (i.target.classList[lastArray] == 'bi-eye-slash') {
+                i.target.classList.remove('bi-eye-slash')
+                i.target.classList.add('bi-eye')
+                i.currentTarget.parentNode.querySelector('input').type = 'text'
+            } else {
+                i.target.classList.add('bi-eye-slash')
+                i.target.classList.remove('bi-eye')
+                i.currentTarget.parentNode.querySelector('input').type = 'password'
+            }
+        });
+    }
+
+    
       
