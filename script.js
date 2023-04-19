@@ -90,8 +90,9 @@ fetch("https://dummyjson.com/products?offset=0&limit=100")
       item = Math.floor(Math.random()*value2.length)
  
     ihtml += `
-    <div class="product-card">
-    <a class="aaa" target="_blank"">
+   <div class="product-card" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${value2[item].id
+    })">
+    <a class="aaa " target="_blank"">
       <div class="product-front-image">
         <div class="front-image">
           <img alt="" class="img-fluid" src="${value2[item].thumbnail}" onclick="singleproductdetail()>
@@ -139,8 +140,8 @@ fetch("https://dummyjson.com/products?offset=0&limit=100")
       
       <a class="text-decoration-none" target="_blank" href="#">
         <div class="price-info-sec">
-          <div class="price">$${Number.parseInt(value2[item].price-(value2[item].price/value2[item].discountPercentage))} </div>
-          <div class="cut-off">$${value2[item].price}</div>
+          <div class="price text-decoration-none">$${Number.parseInt(value2[item].price-(value2[item].price/value2[item].discountPercentage))} </div>
+          <div class="cut-off ">$${value2[item].price}</div>
           <div class="discount-percent"><span>${Math.ceil(value2[item].discountPercentage)}% off</span></div>
           </div>
           </a>
@@ -154,7 +155,8 @@ document.getElementById("allproduct").addEventListener("click", function(){
   let allprodct = ""
    for(let item in value2){
     allprodct += `
-    <div class="product-card">
+   <div class="product-card" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${value2[item].id
+    })">
     <a class="aaa" target="_blank"">
       <div class="product-front-image">
         <div class="front-image">
@@ -223,7 +225,8 @@ document.getElementById("allproduct").addEventListener("click", function(){
      let sphtml='';
     for(let item in smrtphonevalue){
         sphtml += `
-        <div class="product-card">
+       <div class="product-card" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${value2[item].id
+    })">
         <a class="aaa" target="_blank"">
           <div class="product-front-image">
             <div class="front-image">
@@ -293,7 +296,8 @@ document.getElementById("allproduct").addEventListener("click", function(){
      let mthtml='';
     for(let item in motorcyclevalue){
         mthtml += `
-        <div class="product-card">
+       <div class="product-card" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${value2[item].id
+    })">
         <a class="aaa" target="_blank"">
           <div class="product-front-image">
             <div class="front-image">
@@ -362,7 +366,8 @@ document.getElementById("allproduct").addEventListener("click", function(){
      let fraghtml='';
     for(let item in frangrancevalue){
       fraghtml += `
-      <div class="product-card">
+     <div class="product-card" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${value2[item].id
+    })">
       <a class="aaa" target="_blank"">
         <div class="product-front-image">
           <div class="front-image">
@@ -431,7 +436,8 @@ document.getElementById("allproduct").addEventListener("click", function(){
      let groceriesvaluehtml='';
     for(let item in groceriesvalue){
       groceriesvaluehtml += `
-      <div class="product-card">
+     <div class="product-card" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${value2[item].id
+    })">
       <a class="aaa" target="_blank"">
         <div class="product-front-image">
           <div class="front-image">
@@ -500,7 +506,8 @@ document.getElementById("allproduct").addEventListener("click", function(){
      let furniturevaluehtml='';
     for(let item in furniturevalue){
       furniturevaluehtml += `
-      <div class="product-card">
+     <div class="product-card" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${value2[item].id
+    })">
       <a class="aaa" target="_blank"">
         <div class="product-front-image">
           <div class="front-image">
@@ -569,7 +576,8 @@ document.getElementById("allproduct").addEventListener("click", function(){
      let Menvaluehtml='';
     for(let item in Menvalue){
       Menvaluehtml += `
-      <div class="product-card">
+     <div class="product-card" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${value2[item].id
+    })">
       <a class="aaa" target="_blank"">
         <div class="product-front-image">
           <div class="front-image">
@@ -637,7 +645,8 @@ document.getElementById("allproduct").addEventListener("click", function(){
      let Womanvaluehtml='';
     for(let item in Womanvalue){
       Womanvaluehtml += `
-      <div class="product-card">
+     <div class="product-card" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${value2[item].id
+    })">
       <a class="aaa" target="_blank"">
         <div class="product-front-image">
           <div class="front-image">
@@ -716,7 +725,7 @@ function navSearchFunction() {
   let searchvaluehtml='';
     for(let item in searchResult){
       searchvaluehtml += `
-      <div class="product-card">
+     <div class="product-card">
       <a class="aaa" target="_blank"">
         <div class="product-front-image">
           <div class="front-image">
@@ -763,7 +772,7 @@ function navSearchFunction() {
         <a class="brand-desc" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${searchResult[item].id})">${searchResult[item].title}</a>
         <div class="color-details">Grey</div>
         
-        <a class="" target="_blank" href="#">
+        <a class="text-decoration-none" target="_blank" href="#">
           <div class="price-info-sec">
             <div class="price">₹${Number.parseInt(searchResult[item].price-(searchResult[item].price/searchResult[item].discountPercentage))} </div>
             <div class="cut-off">₹${searchResult[item].price}</div>
@@ -771,6 +780,7 @@ function navSearchFunction() {
           </div>
         </a>
       </div>
+      <div class="pb-3 "><button type="button" class="btn sign_buy"><a class="text-decoration-none" title="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="singleiddescription(${searchResult[item].id})">Buy Now</a></button></div>
     </div>`;
     }
     
@@ -798,7 +808,7 @@ function singleiddescription(data) {
       <div class="row  m-4 ">
           <div class="col">
               <div>
-                  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                  <div id="carouselExampleAutoplaying" class="carousel slide model_section" data-bs-ride="carousel">
                       <div class="carousel-inner">
                           <div class="carousel-item active" >
                               <img src="${element.images[1]}" class="d-block rounded img-fluid singleproductimg "
@@ -824,48 +834,49 @@ function singleiddescription(data) {
                   </div>
               </div>
           </div>
-          <div class="col ">
-              <div class="text-end " onclick="clearquantityvalue()" data-bs-dismiss="modal"><i class="bi bi-x-lg link-warning icon-link-hover"></i></div>
-              <div class="text-start fs-2 mb-4">${element.title}</div>
-              <div class="d-flex align-content-start ">
-                  <span class="bi bi-star-fill "></span>
-                  <span class="bi bi-star-fill "></span>
-                  <span class="bi bi-star-fill "></span>
-                  <span class="bi bi-star-fill "></span>
-                  <span class="bi bi-star-half "></span>
+          <div class="col  close_position">
+              <div class="text-end " onclick="clearquantityvalue()" data-bs-dismiss="modal"><img src="image/close.svg" alt="Close Button"  class="img-fluid close_button"/></div>
+              <div class="text-start element_title fs-2 mb-4">${element.title}</div>
+              <div class="d-flex align-content-start pb-2 ">
+                  <span class="bi bi-star-fill element_bi"></span>
+                  <span class="bi bi-star-fill element_bi"></span>
+                  <span class="bi bi-star-fill element_bi"></span>
+                  <span class="bi bi-star-fill element_bi"></span>
+                  <span class="bi bi-star-half element_bi"></span>
 
               </div>
-              <div class="text-start fs-4 mb-1">${element.brand}</div>
+              <div class="text-start fs-4 mb-1 pb-2 element_title">${element.brand}</div>
 
               <div class="price-info-sec">
-                  <div class="price">$${Number.parseInt(
+                  <div class="price pb-2 element_title">$${Number.parseInt(
                       element.price - element.price / element.discountPercentage
                       )} </div>
-                  <div class="cut-off">$${element.price}</div>
-                  <div class="discount-percent"><span>${Math.ceil(
+                  <div class="cut-off pb-2 element_title">$${element.price}</div>
+                  <div class="discount-percent pb-1"><span>${Math.ceil(
                           element.discountPercentage
                           )}% off</span></div>
               </div>
-              <div>${element.description}</div>
+              <div class="pb-3 fs-4 text-justify element_title">${element.description}</div>
               <div>
               <div class="col-lg-4">
               <div class="input-group">
           <span class="input-group-btn">
-              <button type="button" class="quantity-left-minus btn btn-danger btn-number" onclick="minus()"  data-type="minus" data-field="">
+              <button type="button" class="quantity-left-minus btn minus_button btn-number" onclick="minus()"  data-type="minus" data-field="">
                 <span class="bi bi-dash-lg"></span>
               </button>
           </span>
-          <input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1" max="100">
+          <input type="text" id="quantity" name="quantity" class="form-control input-number text-center" value="1" min="1" max="100">
           <span class="input-group-btn">
-              <button type="button" class="quantity-right-plus btn btn-success btn-number" onclick="plus()" data-type="plus" data-field="">
+              <button type="button" class="quantity-right-plus btn plus_button btn-number" onclick="plus()" data-type="plus" data-field="">
                   <span class="bi bi-plus-lg"></span>
               </button>
           </span>
       </div>
 </div>
-              <div class="d-flex align-items-end ">
-              <button type="button" class="btn btn-warning m-3" onclick="clearquantityvalue()" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary m-3" >ADD TO CART <spna class="bi bi-cart4"></span></button>
+              <div class="d-flex align-items-end mt-5 ">
+              
+              <div class="pb-3 "><button type="button" class="btn sign_buy"><a class="text-decoration-none" >Buy Now</a></button></div>
+
               </div>
           </div>
 
@@ -1028,8 +1039,8 @@ fetch('gitteam.json')
                 </div>
                 <div class="col text-center pt-5  mt-5 "><h3 class="fw-bold text-uppercase">${value2[data].name}</h3></div>
                 <div class="col text-center"><h5>${value2[data].bio}</h5></div>
-                <div class="col pt-3"> <p class="text-justify fs-5 text-center">A typical web development team looks like this: requirements analyst; Project Manager; UI/UX designer; web developer; QA Engineer</p> </div>
-                <div class="col  text-center "> <i class="bi bi-geo-alt-fill jodh-location"></i> <span class="fs-5 teamlo">Jodhpur(Rajasthan)</span></div>
+                <div class="col pt-3"> <p class="text-justify fs-5 text-center">${value2[data].bio_data}</p> </div>
+                <div class="col  text-center "> <i class="bi bi-geo-alt-fill jodh-location"></i> <span class="fs-5 teamlo">${value2[data].location}</span></div>
                 <div class="row text-center pt-4">
                     <div class="col fw-bold fs-2 count">${value2[data].followers}</div>
                     <div class="col fw-bold fs-2 count">${value2[data].public_repos}</div>
@@ -1037,7 +1048,7 @@ fetch('gitteam.json')
                 </div>
                 <div class="row text-center pb-2">
                     <div class="col fs-5 text-capitalize">followers</div>
-                    <div class="col fs-5 text-capitalize">repo</div>
+                    <div class="col fs-5 text-capitalize">Repository</div>
                     <div class="col fs-5 text-capitalize">following</div>
                 </div>
                 
@@ -1077,27 +1088,26 @@ fetch('gitteam.json')
                 </div>
                 <div class="col text-center pt-5  mt-5 "><h3 class="fw-bold text-uppercase">${value2[data].name}</h3></div>
                 <div class="col text-center"><h5>${value2[data].bio}</h5></div>
-                <div class="col pt-3"> <p class="text-justify fs-5 text-center">A typical web development team looks like this: requirements analyst; Project Manager; UI/UX designer; web developer; QA Engineer</p> </div>
-                <div class="col  text-center "> <i class="bi bi-geo-alt-fill jodh-location"></i> <span class="fs-5 teamlo">Jodhpur(Rajasthan)</span></div>
+                <div class="col pt-3"> <p class="text-justify fs-5 text-center"></p> </div>
+                <div class="col  text-center "> <i class="bi bi-geo-alt-fill jodh-location"></i> <span class="fs-5 teamlo">${value2[data].location}</span></div>
                 <div class="row text-center pt-4">
                     <div class="col fw-bold fs-2 count">${value2[data].followers}</div>
                     <div class="col fw-bold fs-2 count">${value2[data].public_repos}</div>
                     <div class="col fw-bold fs-2 count">${value2[data].following}</div>
                 </div>
                 <div class="row text-center pb-2">
-                    <div class="col fs-3">followers</div>
-                    <div class="col fs-3">work</div>
-                    <div class="col fs-3">following</div>
+                    <div class="col fs-3">Followers</div>
+                    <div class="col fs-3">Repository</div>
+                    <div class="col fs-3">Following</div>
                 </div>
                 
                 <div class="profile-card-buttons mb-5">
                     <div class="profile-card-button">
-                        <span>contact me</span>
+                        <span>Let's Connect</span>
                         <div class="social-icons">
-                            <a href="${value2[data].url}" ><i class="fa-brands fa-github"></i></a>         
-                            <a href="${value2[data].url}" ><i class="fa-brands fa-github"></i></a>
-                            <a href="${value2[data].repos_url}"><i class="fa-brands fa-github"></i></a>
-                            <a href="${value2[data].blog}" ><i class="fa-brands fa-wordpress"></i></a>
+                        <a href="${value2[data].git_data}" ><i class="fa-brands fa-github"></i></a>         
+                        <a href="${value2[data].linkden_data}" ><i class="bi bi-linkedin"></i></a>
+                        <a href="${value2[data].port_data}"><i class="bi bi-file-earmark-person"></i></a>
                         </div>
                     </div>
                 </div>

@@ -258,7 +258,7 @@ body {
 }
 
 .hovereffect {
-
+    cursor: pointer;
     border: 0px solid red;
 }
 
@@ -549,6 +549,60 @@ body {
         border-image: conic-gradient(from var(--angle), var(--c2),var(--c3), var(--c1) 0.1turn, var(--c1), 0.15turn,var(--c3) 0.15turn, var(--c2) 0.25turn) 30;
         animation: borderRotate var(--d) linear infinite forwards;
     }
+      #main_vav li:nth-child(1){
+    background-color:none !important;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    padding: 0px 15px 0px 15px;
+  }
+  #main_vav_shop li:nth-child(2){
+    background-color: #FCA311;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    padding: 0px 15px 0px 15px;
+  }
+  #main_vav_about li:nth-child(4){
+    background-color: #FCA311;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    padding: 0px 15px 0px 15px;
+  }
+  #main_vav_contact li:nth-child(6){
+    background-color: #FCA311;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    padding: 0px 15px 0px 15px;
+  }
+  #main_vav_feature li:nth-child(3){
+    background-color: #FCA311;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    padding: 0px 15px 0px 15px;
+  }
+  #main_nav_team li:nth-child(5){
+    background-color: #FCA311;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    padding: 0px 25px 0px 15px;
+  }
 }
 
 /* -----back to top code is here ------------------ */
@@ -724,47 +778,244 @@ body {
     background: #FCA311;
     border: 2px solid white;
 }
+
+/* head button code is here------------------ */
 .dark-mode #main_vav li .nav-link{
-    background: #FCA311 !important;
-    border: 0px solid white ;
-    padding: 10px 14px 10px 13px;
-    color: #14213D !important;
+    background: black ;
+    color: #14213D ;
     border-radius: 10px;
+}
+.dark-mode #main_vav li:nth-child(1) {
+    background-color: black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    box-shadow: rgba(253, 253, 253, 0.12) 0px 2px 4px 0px, rgba(254, 254, 254, 0.32) 0px 2px 16px 0px;
+    border: 0px solid red;
 }
 .dark-mode #main_vav_shop li .nav-link{
-    background: #FCA311 !important;
     border: 0px solid white ;
-    padding: 10px 14px 10px 13px;
-    color: #14213D !important;
+    color: #14213D ;
     border-radius: 10px;
+}
+.dark-mode #main_vav li:nth-child(2) {
+    background-color: black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    box-shadow: rgba(253, 253, 253, 0.12) 0px 2px 4px 0px, rgba(254, 254, 254, 0.32) 0px 2px 16px 0px;
+    border: 0px solid red;
 }
 .dark-mode #main_vav_about li .nav-link{
-    background: #FCA311 !important;
     border: 0px solid white ;
-    padding: 10px 14px 10px 13px;
-    color: #14213D !important;
+    color: #14213D ;
     border-radius: 10px;
+}
+.dark-mode #main_vav li:nth-child(3) {
+    background-color: black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    box-shadow: rgba(253, 253, 253, 0.12) 0px 2px 4px 0px, rgba(254, 254, 254, 0.32) 0px 2px 16px 0px;
+    border: 0px solid red;
 }
 .dark-mode #main_vav_contact li .nav-link{
-    background: #FCA311 !important;
     border: 0px solid white ;
-    padding: 10px 14px 10px 13px;
-    color: #14213D !important;
+    color: #14213D ;
     border-radius: 10px;
+}
+.dark-mode #main_vav li:nth-child(4) {
+    background-color: black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    box-shadow: rgba(253, 253, 253, 0.12) 0px 2px 4px 0px, rgba(254, 254, 254, 0.32) 0px 2px 16px 0px;
+    border: 0px solid red;
 }
 .dark-mode #main_vav_feature li .nav-link{
-    background: #FCA311 !important;
     border: 0px solid white ;
-    padding: 10px 14px 10px 13px;
-    color: #14213D !important;
+    color: #14213D ;
     border-radius: 10px;
 }
+.dark-mode #main_vav li:nth-child(5) {
+    background-color: black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    box-shadow: rgba(253, 253, 253, 0.12) 0px 2px 4px 0px, rgba(254, 254, 254, 0.32) 0px 2px 16px 0px;
+    border: 0px solid red;
+}
+
+/* ------second button nav is here shop -------------------------- */
+.dark-mode #main_vav_shop li .nav-link{
+    border: 0px solid white ;
+    color: #14213D ;
+    border-radius: 10px;
+}
+.dark-mode #main_vav_shop li {
+    background-color: black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    box-shadow: rgba(253, 253, 253, 0.12) 0px 2px 4px 0px, rgba(254, 254, 254, 0.32) 0px 2px 16px 0px;
+    border: 0px solid red;
+}
+.dark-mode #main_vav_shop li:nth-child(2) {
+    background-color: black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    box-shadow: rgba(253, 253, 253, 0.12) 0px 2px 4px 0px, rgba(254, 254, 254, 0.32) 0px 2px 16px 0px;
+    border: 0px solid red;
+}
+
+/* --------------nav shop is closed ----------------------- */
+
+/* --------feature part is here ---------------------- */
+.dark-mode #main_vav_feature li .nav-link{
+    border: 0px solid white ;
+    color: #14213D ;
+    border-radius: 10px;
+}
+.dark-mode #main_vav_feature li {
+    background-color: black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    box-shadow: rgba(253, 253, 253, 0.12) 0px 2px 4px 0px, rgba(254, 254, 254, 0.32) 0px 2px 16px 0px;
+    border: 0px solid red;
+}
+.dark-mode #main_vav_feature li:nth-child(3) {
+    background-color: black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    box-shadow: rgba(253, 253, 253, 0.12) 0px 2px 4px 0px, rgba(254, 254, 254, 0.32) 0px 2px 16px 0px;
+    border: 0px solid red;
+}
+
+/* --------feature part is closed ---------------------------- */
+/* --------------about button dark mode is here --------------- */
+.dark-mode #main_vav_about li .nav-link{
+    border: 0px solid white ;
+    color: #14213D ;
+    border-radius: 10px;
+}
+.dark-mode #main_vav_about li {
+    background-color: black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    box-shadow: rgba(253, 253, 253, 0.12) 0px 2px 4px 0px, rgba(254, 254, 254, 0.32) 0px 2px 16px 0px;
+    border: 0px solid red;
+}
+.dark-mode #main_vav_about li:nth-child(4) {
+    background-color: black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    box-shadow: rgba(253, 253, 253, 0.12) 0px 2px 4px 0px, rgba(254, 254, 254, 0.32) 0px 2px 16px 0px;
+    border: 0px solid red;
+}
+
+/* -------------about button dark mode is closed ------------------ */
+
+/* ---------------------team button is here ---------------------- */
 .dark-mode #main_nav_team li .nav-link{
-    background: #FCA311 !important;
+    border: 0px solid white ;
+    color: #14213D ;
+    border-radius: 10px;
+}
+.dark-mode #main_nav_team li {
+    background-color: black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    box-shadow: rgba(253, 253, 253, 0.12) 0px 2px 4px 0px, rgba(254, 254, 254, 0.32) 0px 2px 16px 0px;
+    border: 0px solid red;
+}
+.dark-mode #main_nav_team li:nth-child(5) {
+    background-color: black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    box-shadow: rgba(253, 253, 253, 0.12) 0px 2px 4px 0px, rgba(254, 254, 254, 0.32) 0px 2px 16px 0px;
+    border: 0px solid red;
+}
+
+/* ----------------------team button is closed --------------------- */
+/* ---------------------------contact button is closed ------------------ */
+.dark-mode #main_vav_contact li .nav-link{
+    border: 0px solid white ;
+    color: #14213D ;
+    border-radius: 10px;
+}
+.dark-mode #main_vav_contact li {
+    background-color: black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    box-shadow: rgba(253, 253, 253, 0.12) 0px 2px 4px 0px, rgba(254, 254, 254, 0.32) 0px 2px 16px 0px;
+    border: 0px solid red;
+}
+.dark-mode #main_vav_contact li:nth-child(6) {
+    background-color: black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    box-shadow: rgba(253, 253, 253, 0.12) 0px 2px 4px 0px, rgba(254, 254, 254, 0.32) 0px 2px 16px 0px;
+    border: 0px solid red;
+}
+
+/* -----------------------------contact button is over now --------------- */
+
+/* -------head button code is closed --------------------------- */
+.dark-mode #main_nav_team li .nav-link{
     border: 0px solid white ;
     padding: 10px 14px 10px 13px;
-    color: #14213D !important;
+    color: #14213D ;
     border-radius: 10px;
+}
+.dark-mode #main_vav li:nth-child(6) {
+    background-color: black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0px solid red;
+    text-align: center;
+    border-radius: 10px;
+    color: white !important;
+    padding: 0px 15px 0px 15px;
+    box-shadow: rgba(253, 253, 253, 0.12) 0px 2px 4px 0px, rgba(254, 254, 254, 0.32) 0px 2px 16px 0px;
+    border: 0px solid red;
 }
 .dark-mode input::placeholder {
     color: #14213D !important;
@@ -776,7 +1027,14 @@ body {
     color: white !important;
     border-radius: 10px;
   }
-
+  .dark-mode .element_title{
+    color: #14213D !important;
+  }
+  .dark-mode .element_bi{
+    border: 0px solid red;
+    color: #14213D;
+  }
+ 
 
 
 
@@ -881,7 +1139,7 @@ body {
 }
 
 .goog-te-gadget {
-    font-size: 20px !important;
+    font-size: 18px !important;
 }
 
 .goog-te-combo,
@@ -891,7 +1149,7 @@ body {
 .VIpgJd-ZVi9od-vH1Gmf *,
 .VIpgJd-ZVi9od-l9xktf * {
     font-family: arial;
-    font-size: 22pt !important;
+    font-size: 18pt !important;
 }
 
 /* ----------new footer css is closed ----------------- */
@@ -966,10 +1224,12 @@ body {
     
 }
 
+
 .sign1:hover {
     color: #fff;
-
+    border: 0px solid red;
 }
+
 
 .sign1:before {
     top: 100%;
@@ -981,6 +1241,7 @@ body {
     top: -30px;
     left: -30px;
 }
+
 
 .sign_buy {
     font-family: sans-serif;
@@ -1020,10 +1281,13 @@ body {
 
 .sign_buy a:hover {
     color: #fff;
+    border: 0px solid white;
 
 }
 .sign_buy a {
     color: #14213D;
+    border: 0px solid red;
+    padding: 10px 31px 10px 30px;
 
 }
 
@@ -1390,20 +1654,20 @@ body {
     0% {
         border-radius : 30% 70% 70% 30% / 30% 30% 70% 70%;
         box-shadow : 15px 15px 50px rgba(0,0,0,0.2);
-        border: 5px dotted #26375c;
+         
     }
     25% { 
         border-radius : 58% 42% 75% 25% / 76% 46% 54% 24%;
-        border: 5px dotted #FCA311;
+         
     }
     50% {
         border-radius : 50% 50% 33% 67% / 55% 27% 73% 45%;
         box-shadow : -10px -5px 50px rgba(0,0,0,0.2);
-        border: 5px dotted #26375c;
+         
     }
     75% {
         border-radius : 33% 67% 58% 42% / 63% 68% 32% 37%;
-        border: 5px dotted #E5E5E5;		
+         		
     }
 }
 .jodh-location{
@@ -1522,6 +1786,7 @@ body {
     border-radius: 10px;
     transform: scale(1.0);
     transition: 0s;
+    cursor: pointer;
 }
 .product-card:hover{
     transform: scale(1.1);
@@ -1642,6 +1907,9 @@ body {
 	font-weight: 400;
 	color:#878787;
 	text-decoration: line-through;
+}
+.cut-off a{
+    text-decoration: none;
 }
 
 .price-info-sec .discount-percent span{
@@ -1784,6 +2052,13 @@ body {
     color: white !important;
     border-radius: 10px;
   }
+  .model_section .active{
+    border: 0px solid red;
+    font-weight: 600;
+    background-color: #F9F9F8 !important;
+    color: white !important;
+    border-radius: 10px;
+  }
 #count-words{
     color: #FCA311;
     
@@ -1796,4 +2071,63 @@ body {
     width: 50px;
     height: 30px;
 }
+.minus_button{
+    border: 0px solid red;
+    background-color: #14213D;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px 0px 0px 10px !important;
+}
+.minus_button:hover{
+    border: 0px solid red;
+    background-color: #14213D;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px 0px 0px 10px !important;
+}
+.plus_button{
+        border: 0px solid red;
+        background-color: #14213D;
+        color: white;
+        padding: 10px 15px 10px 15px;
+        border-radius: 0px 10px 10px 0px !important;
+}
+.plus_button:hover{
+        border: 0px solid red;
+        background-color: #14213D;
+        color: white;
+        padding: 10px 15px 10px 15px;
+        border-radius: 0px 10px 10px 0px !important;
+}
+.close_button{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    border: 0px solid red;
 
+}
+.close_position{
+    position: relative;
+    top: 0px;
+}
+.search_user{
+    text-decoration: none;
+}
+.key_feature_main{
+    transform: scale(1.0);
+    transition: 0.40s;
+    border: 0px solid red;
+}
+.key_feature_main:hover{
+    transform: scale(1.1);
+}
+.contact_section_scale{
+    transform: scale(0.9);
+    transition: 0.40s;
+}
+.contact_section_scale:hover{
+    transform: scale(1.0);
+}
