@@ -1041,6 +1041,11 @@ body {
     color: white !important;
     border-radius: 10px;
   }
+  .dark-mode .form-floating>label{
+    color: black !important;
+    display: none;
+    
+  }
  
 
 
