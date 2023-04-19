@@ -14,153 +14,155 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
-        
+    body {
+        font-family: 'Poppins', sans-serif !important;
+    }
 
 
-        /* add padding on input */
+    /* add padding on input */
 
-        .text-indent {
-            text-indent: .5rem;
+    .text-indent {
+        text-indent: .5rem;
+    }
+
+
+    /* add password hide and show icon */
+
+    .password__icon {
+        position: absolute;
+        right: 0;
+        padding: 15px 20px;
+        cursor: pointer;
+    }
+
+
+    /* backgroun grey */
+
+    .bg-grey-light {
+        background: #f0f0f0;
+    }
+
+    .bg-grey-light:focus {
+        background: #f0f0f0;
+    }
+
+    @media (min-width: 1024px) {
+        body {
+            overflow-y: hidden;
         }
 
-
-        /* add password hide and show icon */
-
-        .password__icon {
-            position: absolute;
-            right: 0;
-            padding: 15px 20px;
-            cursor: pointer;
+        /* add circle blue background */
+        .ball {
+            overflow: hidden;
+            transition: margin 1s;
+            width: 600px;
+            height: 600px;
         }
 
-
-        /* backgroun grey */
-
-        .bg-grey-light {
-            background: #f0f0f0;
+        .ball.login {
+            margin-left: 50%;
+            margin-top: 5%;
         }
 
-        .bg-grey-light:focus {
-            background: #f0f0f0;
+        .ball.register {
+            margin-left: 14%;
+            margin-top: 6%;
         }
 
-        @media (min-width: 1024px) {
-            body {
-                overflow-y: hidden;
+        /* bouncing effect */
+        .bounce {
+            animation: bounce 2s infinite alternate;
+            -webkit-animation: bounce 2s infinite alternate;
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translateY(0px);
             }
 
-            /* add circle blue background */
-            .ball {
-                overflow: hidden;
-                transition: margin 1s;
-                width: 600px;
-                height: 600px;
-            }
-
-            .ball.login {
-                margin-left: 50%;
-                margin-top: 5%;
-            }
-
-            .ball.register {
-                margin-left: 14%;
-                margin-top: 6%;
-            }
-
-            /* bouncing effect */
-            .bounce {
-                animation: bounce 2s infinite alternate;
-                -webkit-animation: bounce 2s infinite alternate;
-            }
-
-            @keyframes bounce {
-                from {
-                    transform: translateY(0px);
-                }
-
-                to {
-                    transform: translateY(-35px);
-                }
-            }
-
-            @-webkit-keyframes bounce {
-                from {
-                    transform: translateY(0px);
-                }
-
-                to {
-                    transform: translateY(-35px);
-                }
-            }
-
-            /* register form active */
-            .register__form.active {
-                margin-left: 10% !important;
-                opacity: 1;
-            }
-
-            /* login form active */
-            .login__form.active {
-                opacity: 1;
-                margin-left: 10% !important;
+            to {
+                transform: translateY(-35px);
             }
         }
 
-        @media (max-width: 768px) {
-            .container .col-12.p-5 {
-                padding: 0px !important;
+        @-webkit-keyframes bounce {
+            from {
+                transform: translateY(0px);
             }
 
-            body {
-                overflow-x: hidden;
+            to {
+                transform: translateY(-35px);
             }
         }
-
-
-        /* register default */
-
-        .register__form {
-            position: absolute;
-            width: 100%;
-            height: 100vh;
-            margin-left: -100%;
-            opacity: 0;
-            transition: margin 1s, opacity .5s;
-            z-index: 1;
-        }
-
 
         /* register form active */
-
         .register__form.active {
-            margin-left: 0%;
+            margin-left: 10% !important;
             opacity: 1;
         }
 
-
-        /* login form default */
-
-        /* .login__form {
-            position: absolute;
-            width: 100%;
-            height: 100vh;
-            margin-left: -100%;
-            opacity: 0;
-            transition: margin 1s, opacity .5s;
-            z-index: 1;
-        } */
-
-
         /* login form active */
-
-        /* .login__form.active {
+        .login__form.active {
             opacity: 1;
-            margin-left: 0%;
-        } */
-    </style>
+            margin-left: 10% !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container .col-12.p-5 {
+            padding: 0px !important;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+    }
+
+
+    /* register default */
+
+    .register__form {
+        position: absolute;
+        width: 100%;
+        /* height: 100vh; */
+        margin-left: -100%;
+        opacity: 0;
+        transition: margin 1s, opacity .5s;
+        z-index: 1;
+    }
+
+
+    /* register form active */
+
+    .register__form.active {
+        margin-left: 0%;
+        opacity: 1;
+    }
+
+
+    /* login form default */
+
+    .login__form {
+        position: absolute;
+        width: 100%;
+        /* height: 100vh; */
+        margin-left: -100%;
+        opacity: 0;
+        transition: margin 1s, opacity .5s;
+        z-index: 1;
+    }
+
+
+    /* login form active */
+
+    .login__form.active {
+        opacity: 1;
+        margin-left: 0%;
+    }
+</style>
 </head>
 
 <body>
@@ -234,212 +236,210 @@
         <!-- ------------------ nav bar is closed is here------------------------ -->
     </div>
 
-    <!-- ---------login section is here ----------------------- -->
-     <div class="container-fluid">
-        <div class="">
-            <div class="">
-                    <!-- yellow circle background -->
-<div class="d-none d-md-block ball login position-absolute rounded-circle"
-style="background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(252,163,17,1) 90%);"></div>
+   <!-- login and registration form -->
+    <div class="container-fluid">
+        <!-- yellow circle background -->
+        <div class="d-none d-md-block ball login position-absolute rounded-circle"
+            style="background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(252,163,17,1) 90%);"></div>
 
-<!-- Login Section -->
-<div class="container login__form active">
-<div class="row vh-100 w-100 align-self-center">
-    <div class="col-12 col-lg-6 col-xl-6 px-5">
-        <div class="row vh-100">
-            <div class="col align-self-center p-5 w-100">
-                <h3 class="fw-bolder">WELCOME BACK !</h3>
-                <p class="fw-lighter fs-6">Don't have an account, <span id="signUp" role="button"
-                        class="text-primary fw-bolder">Sign Up</span></p>
-                <!-- form login section -->
-                <form action="" class="mt-5">
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Email</label>
-                        <input type="email"
-                            class="email form-control text-indent shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3"
-                            placeholder="name@example.com" required>
-                    </div>
-                    <!-- display email error -->
-                    <div class="error text-danger fw-bolder emailMissing"></div>
-                    <div class="error text-danger fw-bolder emailError"></div>
+        <!-- Login Section -->
+        <div class="container border border-danger login__form active">
+
+            <div class="row w-100 align-self-center">
+                <div class="col-12 col-lg-6 col-xl-6 px-5">
+                    <div class="row">
+                        <div class="col align-self-center p-5 w-100">
+                            <h3 class="fw-bolder">WELCOME BACK !</h3>
+                            <p class="fw-lighter fs-6">Don't have an account, <span id="signUp" role="button"
+                                    class="text-primary fw-bolder">Sign Up</span></p>
+                            <!-- form login section -->
+                            <form action="" class="mt-5">
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Email</label>
+                                    <input type="email"
+                                        class="email form-control text-indent shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3"
+                                        placeholder="name@example.com" required>
+                                </div>
+                                <!-- display email error -->
+                                <div class="error text-danger fw-bolder emailMissing"></div>
+                                <div class="error text-danger fw-bolder emailError"></div>
 
 
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Password</label>
-                        <div class="d-flex position-relative">
-                            <input type="password"
-                                class="form-control text-indent auth__password shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3"
-                                required>
-                            <span class="password__icon text-primary fs-4 fw-bold bi bi-eye-slash"></span>
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Password</label>
+                                    <div class="d-flex position-relative">
+                                        <input type="password"
+                                            class="form-control text-indent auth__password shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3"
+                                            required>
+                                        <span class="password__icon text-primary fs-4 fw-bold bi bi-eye-slash"></span>
+                                    </div>
+                                </div>
+                                <div class="col text-center">
+                                    <!-- <button type="submit"
+                                    class="btn btn-outline-dark btn-lg rounded-pill mt-4 w-100">Login</button> -->
+                                    <input type="submit"
+                                        class="submitButton btn btn-outline-dark btn-lg rounded-pill mt-4 w-100"
+                                        value="Login">
+                                </div>
+                            </form>
+                            <p class="mt-5 text-center">Or Sign in with social platforms</p>
+                            <div class="row text-center">
+                                <div class="col mt-3">
+                                    <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
+                                            class="bi bi-facebook fs-5"></i></a>
+                                </div>
+                                <div class="col mt-3">
+                                    <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
+                                            class="bi bi-linkedin fs-5"></i></a>
+                                </div>
+                                <div class="col mt-3">
+                                    <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
+                                            class="bi bi-twitter fs-5"></i></a>
+                                </div>
+                                <div class="col my-3">
+                                    <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
+                                            class="bi bi-google fs-5"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col text-center">
-                        <!-- <button type="submit"
-                            class="btn btn-outline-dark btn-lg rounded-pill mt-4 w-100">Login</button> -->
-                        <input type="submit"
-                            class="submitButton btn btn-outline-dark btn-lg rounded-pill mt-4 w-100"
-                            value="Login">
+                </div>
+                <div class="d-none d-lg-block col-lg-6 col-xl-6 p-5">
+                    <div class="row p-5">
+                        <div class="col align-self-center p-5 text-center">
+                            <img src="img/7a95e97086fbb1170c6d50d4a5996f2a.gif" class="bounce" alt="">
+                        </div>
                     </div>
-                </form>
-                <p class="mt-5 text-center">Or Sign in with social platforms</p>
-                <div class="row text-center">
-                    <div class="col mt-3">
-                        <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
-                                class="bi bi-facebook fs-5"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Register Section -->
+        <div class="container border border-danger register__form">
+            <div class="row border w-100 align-self-center">
+                <div class="d-none d-lg-block col-lg-6 col-xl-6 p-5">
+                    <div class="row  p-5">
+                        <div class="col align-self-center p-5 text-center">
+                            <img src="img/register.png" class="bounce" alt="">
+                        </div>
                     </div>
-                    <div class="col mt-3">
-                        <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
-                                class="bi bi-linkedin fs-5"></i></a>
-                    </div>
-                    <div class="col mt-3">
-                        <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
-                                class="bi bi-twitter fs-5"></i></a>
-                    </div>
-                    <div class="col my-3">
-                        <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
-                                class="bi bi-google fs-5"></i></a>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-6 px-5">
+                    <div class="row">
+                        <div class="col align-self-center p-5 w-100">
+                            <h3 class="fw-bolder">REGISTER HERE !</h3>
+                            <p class="fw-lighter fs-6">Have an account, <span id="signIn" role="button"
+                                    class="text-primary fw-bolder">Sign In</span></p>
+
+                            <!-- Display success and error messages -->
+                            <div id="successMessage" class="text-success fw-bolder" style="display: none;">
+                                Congratulations,
+                                Registration Completed!
+                            </div>
+                            <div id="errorMessage" class="text-warning fw-bolder" style="display: none;">
+                                <span>&#9888;</span> Error: Some Data Is
+                                Missing!
+                            </div>
+
+
+
+                            <!-- form register section -->
+                            <form action="" class="mt-5">
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Username</label>
+                                    <input type="text" id="name"
+                                        class=" form-control text-indent shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3"
+                                        placeholder="name">
+                                </div>
+                                <!-- display username error -->
+                                <div class="error text-danger fw-bolder" id="nameMissing"></div>
+
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Phone Number</label>
+                                    <input id="phone" type="tel"
+                                        class="form-control text-indent shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3"
+                                        placeholder="Phone Number">
+                                </div>
+                                <!-- display phone number error -->
+                                <div class="error text-danger fw-bolder" id="phoneMissing"></div>
+                                <div class="error text-danger fw-bolder" id="phoneError"></div>
+
+
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Email</label>
+                                    <input id="email" type="email"
+                                        class=" form-control text-indent shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3"
+                                        placeholder="name@example.com">
+                                </div>
+                                <!-- display email error -->
+                                <div class="error text-danger fw-bolder" id="emailMissing"></div>
+                                <div class="error text-danger fw-bolder" id="emailError"></div>
+
+
+                                <div class="mb-3">
+                                    <label class="form-label">Password</label>
+                                    <div class="d-flex position-relative">
+                                        <input id="password" type="password"
+                                            class="form-control text-indent auth__password shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3">
+                                        <span class="password__icon text-primary fs-4 fw-bold bi bi-eye-slash"></span>
+                                    </div>
+                                </div>
+                                <!-- Display password missing error -->
+                                <div class="error text-danger fw-bolder" id="passwordMissing"></div>
+
+
+                                <div class="mb-3">
+                                    <label class="form-label">Confirm Password</label>
+                                    <div class="d-flex position-relative">
+                                        <input id="passwordConfirm" type="password"
+                                            class="form-control text-indent auth__password shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3">
+                                        <span class="password__icon text-primary fs-4 fw-bold bi bi-eye-slash"></span>
+                                    </div>
+                                </div>
+                                <!-- display confirm password error -->
+                                <div class="error text-danger fw-bolder" id="confirmPasswordMissing"></div>
+                                <div class="error text-danger fw-bolder" id="passwordConfirmError"></div>
+
+
+                                <div class="mb-3 form-check checkBox">
+                                    <input type="checkbox" class="form-check-input" id="checkbox">
+                                    <label class="form-check-label" for="exampleCheck1">I agree with terms &
+                                        conditions.</label>
+                                </div>
+                                <!-- display check box error message -->
+                                <div class="error text-danger" id="checkboxError"></div>
+
+                                <div class="col text-center">
+                                    <input type="button"
+                                        class="submitButton btn btn-outline-dark btn-lg rounded-pill mt-4 w-100"
+                                        value="Sign Up">
+                                </div>
+                            </form>
+                            <p class="mt-5 text-center">Or Sign in with social platforms</p>
+                            <div class="row text-center">
+                                <div class="col mt-3">
+                                    <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
+                                            class="bi bi-facebook fs-5"></i></a>
+                                </div>
+                                <div class="col mt-3">
+                                    <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
+                                            class="bi bi-linkedin fs-5"></i></a>
+                                </div>
+                                <div class="col mt-3">
+                                    <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
+                                            class="bi bi-twitter fs-5"></i></a>
+                                </div>
+                                <div class="col my-3">
+                                    <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
+                                            class="bi bi-google fs-5"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="d-none d-lg-block col-lg-6 col-xl-6 p-5">
-        <div class="row vh-100 p-5">
-            <div class="col align-self-center p-5 text-center">
-                <img src="assets/img/7a95e97086fbb1170c6d50d4a5996f2a.gif" class="bounce" alt="">
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
-<!-- Register Section -->
-<div class="container register__form">
-<div class="row vh-100 w-100 align-self-center">
-    <div class="d-none d-lg-block col-lg-6 col-xl-6 p-5">
-        <div class="row vh-100 p-5">
-            <div class="col align-self-center p-5 text-center">
-                <img src="assets/img/register.png" class="bounce" alt="">
-            </div>
-        </div>
-    </div>
-    <div class="col-12 col-lg-6 col-xl-6 px-5">
-        <div class="row vh-100">
-            <div class="col align-self-center p-5 w-100">
-                <h3 class="fw-bolder">REGISTER HERE !</h3>
-                <p class="fw-lighter fs-6">Have an account, <span id="signIn" role="button"
-                        class="text-primary fw-bolder">Sign In</span></p>
-
-                <!-- Display success and error messages -->
-                <div id="successMessage" class="text-success fw-bolder" style="display: none;">Congratulations,
-                    Registration Completed!
-                </div>
-                <div id="errorMessage" class="text-warning fw-bolder" style="display: none;">
-                    <span>&#9888;</span> Error: Some Data Is
-                    Missing!</div>
-
-
-
-                <!-- form register section -->
-                <form action="" class="mt-5">
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" id="name"
-                            class=" form-control text-indent shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3"
-                            placeholder="name">
-                    </div>
-                    <!-- display username error -->
-                    <div class="error text-danger fw-bolder" id="nameMissing"></div>
-
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Phone Number</label>
-                        <input id="phone" type="tel"
-                            class="form-control text-indent shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3"
-                            placeholder="Phone Number">
-                    </div>
-                    <!-- display phone number error -->
-                    <div class="error text-danger fw-bolder" id="phoneMissing"></div>
-                    <div class="error text-danger fw-bolder" id="phoneError"></div>
-
-
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Email</label>
-                        <input id="email" type="email"
-                            class=" form-control text-indent shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3"
-                            placeholder="name@example.com">
-                    </div>
-                    <!-- display email error -->
-                    <div class="error text-danger fw-bolder" id="emailMissing"></div>
-                    <div class="error text-danger fw-bolder" id="emailError"></div>
-
-
-                    <div class="mb-3">
-                        <label class="form-label">Password</label>
-                        <div class="d-flex position-relative">
-                            <input id="password" type="password"
-                                class="form-control text-indent auth__password shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3">
-                            <span class="password__icon text-primary fs-4 fw-bold bi bi-eye-slash"></span>
-                        </div>
-                    </div>
-                    <!-- Display password missing error -->
-                    <div class="error text-danger fw-bolder" id="passwordMissing"></div>
-
-
-                    <div class="mb-3">
-                        <label class="form-label">Confirm Password</label>
-                        <div class="d-flex position-relative">
-                            <input id="passwordConfirm" type="password"
-                                class="form-control text-indent auth__password shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3">
-                            <span class="password__icon text-primary fs-4 fw-bold bi bi-eye-slash"></span>
-                        </div>
-                    </div>
-                    <!-- display confirm password error -->
-                    <div class="error text-danger fw-bolder" id="confirmPasswordMissing"></div>
-                    <div class="error text-danger fw-bolder" id="passwordConfirmError"></div>
-
-
-                    <div class="mb-3 form-check checkBox">
-                        <input type="checkbox" class="form-check-input" id="checkbox">
-                        <label class="form-check-label" for="exampleCheck1">I agree with terms &
-                            conditions.</label>
-                    </div>
-                    <!-- display check box error message -->
-                    <div class="error text-danger" id="checkboxError"></div>
-
-                    <div class="col text-center">
-                        <input type="button"
-                            class="submitButton btn btn-outline-dark btn-lg rounded-pill mt-4 w-100"
-                            value="Sign Up">
-                    </div>
-                </form>
-                <p class="mt-5 text-center">Or Sign in with social platforms</p>
-                <div class="row text-center">
-                    <div class="col mt-3">
-                        <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
-                                class="bi bi-facebook fs-5"></i></a>
-                    </div>
-                    <div class="col mt-3">
-                        <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
-                                class="bi bi-linkedin fs-5"></i></a>
-                    </div>
-                    <div class="col mt-3">
-                        <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
-                                class="bi bi-twitter fs-5"></i></a>
-                    </div>
-                    <div class="col my-3">
-                        <a href="" class="btn btn-outline-dark border-2 rounded-circle"><i
-                                class="bi bi-google fs-5"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
-            </div>
-        </div>
-     </div>
 
 
     <!-- ----------login section is closed here --------------- -->
@@ -721,7 +721,194 @@ style="background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(252,163,1
         <i class="bi bi-arrow-up"></i>
     </button>
     <!-- ------back to top button is closed here -------------- -->
+    
+     <!-- Login and registraion jquery code -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
 
+
+
+            function validateEmail(email) {
+                let regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                return regex.test(email);
+            }
+
+            function validatePhone(phone) {
+                let regex2 = /^(\+91|\+91\-|0)?[789]\d{9}$/;
+                return regex2.test(phone);
+            }
+
+            $(".submitButton").click(function () {
+                // alert("my name is deepak");
+                let nameMissing = "";
+                let emailMissing = "";
+                let phoneMissing = "";
+                let passwordMissing = "";
+                let confirmPasswordMissing = "";
+                let emailErrorMessage = "";
+                let phoneErrorMessage = "";
+                let passwordConfirmError = "";
+                let checkboxError = "";
+
+
+
+                /* Checking email validation */
+                if ($("#email").val() == "") {
+                    emailMissing = "Email address is empty!";
+                    $("#emailMissing").html(emailMissing);
+                }
+
+                if (validateEmail($("#email").val()) == false) {
+                    emailErrorMessage = "<p>Your email address is not valid</p>";
+                    $("#emailError").html(emailErrorMessage);
+                }
+
+                /* Displaying email Error messages */
+                if (emailMissing != "") {
+                    $("#emailError").hide();
+                    $("#emailMissing").show();
+                } else if (emailErrorMessage != "") {
+                    $("#emailError").show();
+                    $("#emailMissing").hide();
+                } else {
+                    $("#emailError").hide();
+                    $("#emailMissing").hide();
+                }
+
+                /* Phone number validation */
+                if ($("#phone").val() == "") {
+                    phoneMissing = "Please enter your phone number!";
+                    $("#phoneMissing").html(phoneMissing);
+                }
+                if (validatePhone($("#phone").val()) == false) {
+                    phoneErrorMessage = "<p>Your phone number is not Valid!</p>"
+                    $("#phoneError").html(phoneErrorMessage);
+                }
+
+                /* Display phone error message */
+                if (phoneMissing != "") {
+                    $("#phoneMissing").show();
+                    $("#phoneError").hide();
+                } else if (phoneErrorMessage != "") {
+                    $("#phoneError").show();
+                    $("#phoneMissing").hide();
+                } else {
+                    $("#phoneError").hide();
+                    $("#phoneMissing").hide();
+                }
+
+                // checking username is validation
+                if ($("#name").val() != "") {
+                    // nameMissing = "Username is empty!";
+                    // $(".nameMissing").html(nameMissing);
+                    $("#nameMissing").hide();
+                } else {
+                    nameMissing = "Username is empty!";
+                    $("#nameMissing").html(nameMissing);
+                }
+
+
+                /* Password validation */
+                if ($("#password").val() == "") {
+                    passwordMissing = "Password field is required!";
+                    $("#passwordMissing").html(passwordMissing);
+
+                }
+                if ($("#password").val() != $("#passwordConfirm").val()) {
+                    passwordConfirmError = "Your passwords don't match";
+                    $("#passwordConfirmlError").html(passwordConfirmError);
+                }
+
+                if ($("#passwordConfirm").val() == "") {
+                    confirmPasswordMissing = "Confirm password field is required";
+                    $("#confirmPasswordMissing").html(confirmPasswordMissing);
+                } else if ($("#passwordConfirm").val() != "") {
+                    confirmPasswordMissing = "";
+                    $("#confirmPasswordMissing").html(confirmPasswordMissing);
+                }
+
+
+                /* Display password error message */
+                if (passwordMissing != "") {
+                    $("#passwordMissing").show();
+                    $("#passwordConfirmlError").hide();
+                } else if (passwordConfirmError != "") {
+                    $("#passwordConfirmlError").show();
+                    $("#passwordMissing").hide();
+                } else {
+                    $("#passwordConfirmlError").hide();
+                    $("#passwordMissing").hide();
+                }
+
+
+                // checkbox click validation
+                if ($("#checkbox").prop("checked") == false) {
+                    checkboxError = "Must agree with our terms!";
+                    $("#checkboxError").html(checkboxError);
+                }
+
+                // display checkbox error hide and show
+                if (checkboxError != "") {
+                    $("#checkboxError").show();
+                } else {
+                    $("#checkboxError").hide();
+                }
+
+                /* Display success message if there is no error */
+                if (emailErrorMessage == "" && phoneErrorMessage == "" && passwordConfirmError == "" && checkboxError == "") {
+                    $("#successMessage").show();
+                    $("#errorMessage").hide();
+                } else {
+                    $("#successMessage").hide();
+                    $("#errorMessage").show();
+                }
+
+
+            });
+        });
+
+
+    </script>
+    <!-- event moving of login and register JS script code -->
+    <script>
+        const signUp = document.querySelector("#signUp");
+        const signIn = document.querySelector("#signIn");
+        const passwordIcon = document.querySelectorAll('.password__icon')
+        const authPassword = document.querySelectorAll('.auth__password')
+
+        // when click sign up button
+        signUp.addEventListener('click', () => {
+            document.querySelector('.login__form').classList.remove('active')
+            document.querySelector('.register__form').classList.add('active')
+            document.querySelector('.ball').classList.add('register')
+            document.querySelector('.ball').classList.remove('login')
+        });
+
+        // when click sign in button
+        signIn.addEventListener('click', () => {
+            document.querySelector('.login__form').classList.add('active')
+            document.querySelector('.register__form').classList.remove('active')
+            document.querySelector('.ball').classList.add('login')
+            document.querySelector('.ball').classList.remove('register')
+        });
+
+        // change hidden password to visible password
+        for (var i = 0; i < passwordIcon.length; ++i) {
+            passwordIcon[i].addEventListener('click', (i) => {
+                const lastArray = i.target.classList.length - 1
+                if (i.target.classList[lastArray] == 'bi-eye-slash') {
+                    i.target.classList.remove('bi-eye-slash')
+                    i.target.classList.add('bi-eye')
+                    i.currentTarget.parentNode.querySelector('input').type = 'text'
+                } else {
+                    i.target.classList.add('bi-eye-slash')
+                    i.target.classList.remove('bi-eye')
+                    i.currentTarget.parentNode.querySelector('input').type = 'password'
+                }
+            });
+        }
+    </script>
 
     <script>
 
