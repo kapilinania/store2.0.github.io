@@ -1,8 +1,4 @@
 # shopcart.github.io
-Webpage Link is here :- https://kapilinania.github.io/store2.0.github.io/
-Last deployed by @kapilinania kapilinania 1 minute ago
-
-
 In that Project  i am used API for Product Fatching. i am useing javascript jQuery and Bootstrap.
 
 Website Home Page 

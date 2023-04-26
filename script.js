@@ -1032,13 +1032,13 @@ fetch('gitteam.json')
         for( data in value2){
             console.log(value2[data].login); 
             ihtml1 += `
-            <div class="col team_card m-5 pb-5  ">
+            <div class="col team_card m-5 pb-5  " data-aos="slide-right">
             <div class="p-3 ">
-                <div class="col-5 team-images">
+                <div class="col-5 team-images" >
                 <img src="${value2[data].avatar_url}" class="img-fluid">
                 </div>
-                <div class="col text-center pt-5  mt-5 "><h3 class="fw-bold text-uppercase">${value2[data].name}</h3></div>
-                <div class="col text-center"><h5>${value2[data].bio}</h5></div>
+                <div class="col text-center pt-5  mt-5 "><h3 class="fw-bold text-uppercase" data-aos="flip-up">${value2[data].name}</h3></div>
+                <div class="col text-center" data-aos="flip-up"><h5>${value2[data].bio}</h5></div>
                 <div class="col pt-3"> <p class="text-justify fs-5 text-center">${value2[data].bio_data}</p> </div>
                 <div class="col  text-center "> <i class="bi bi-geo-alt-fill jodh-location"></i> <span class="fs-5 teamlo">${value2[data].location}</span></div>
                 <div class="row text-center pt-4">
@@ -1168,6 +1168,12 @@ fetch('gitteam.json')
             }
         });
     }
+  
+
+    setInterval( function loadhomeProduct_smart(){
+      let loading_web = document.getElementById("product_load_smart");
+      loading_web.style.display = 'none';
+      },3000)  
 
     
       
