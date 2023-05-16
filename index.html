@@ -672,6 +672,28 @@
     </footer>
 
     <!-- new footer is closed  -->
+    <!-- --------cookie code is here ------------------- -->
+    <div id="cookies" style="display: none;" class="w-25 fixed-bottom shadow p-3 ms-4 mb-5 bg-body-tertiary rounded">
+
+        <img style="display: inline;" src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png" alt="" width="70px">
+
+        <button id="closeCookie" style="margin-right: 3%;" class="position-absolute top-7 end-0"><i class="fa-solid fa-x"></i></button>
+
+        <div class="card-body mt-2">
+            <h5 class="card-title fw-bold mb-2">Cookies Consent</h5>
+            <p class="card-text">This site uses cookies. By continuing to browse the site you are agreeing to our use of
+                cookies. <a href="" class="text-sky-500 hover:text-blue-500">To
+                    find
+                    out more click here</a>
+            </p>
+            <button type="button" id="cookies-btn" style="background-color: #FCA311;"
+                class="mt-1 btn text-white fw-bold">I
+                Understand</button>
+
+        </div>
+    </div>
+
+    <!-- ----cookie code is closed ------------------- -->
     <!-- ---------back to top button is here------ -->
     <button type="button" class="btn btn-warning btn-floating btn-lg step" style="color: black;" id="btn-back-to-top">
         <i class="bi bi-arrow-up"></i>
@@ -679,6 +701,8 @@
     <script async src="https://cse.google.com/cse.js?cx=d56364769382e4512">
     </script>
     <!-- ------back to top button is closed here -------------- -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/13240490a1.js" crossorigin="anonymous"></script>
     <script type="text/javascript"
         src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -697,7 +721,56 @@
             loading_web.style.display = 'none';
             },3000)   
                 
+            const setCookie = (cName, cValue, expDays) => {
+            let date = new Date();
+            date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            // creating cookies at homepage using path if we have to set co
+            document.cookie = cName + "=" + cValue + ";" + expires + "; path=/";
+            // For multiple path cookies
+            // document.cookie = cName + "=" + cValue + ";" + expires + "; path=/, path=/about,";
+        }
+
+       const getCookie = (cName) => {
+            const name = cName + "=";
+            const cDecoded = decodeURIComponent(document.cookie);
+            const cArr = cDecoded.split("; ");
+            let value;
+            cArr.forEach(val => {
+                if (val.indexOf(name) === 0) {
+                    value = val.substring(name.length)
+                };
+            })
+
+            return value;
+        }
+
+
+        // created an query selector onclick button for accept the cookies
+        document.querySelector("#cookies-btn").addEventListener("click", () => {
+            document.querySelector("#cookies").style.display = "none";
+            setCookie("cookie", true, 30);
+        })
+
+        // Button created to close the pop up of cookies
+        document.querySelector("#closeCookie").addEventListener("click", () => {
+            document.querySelector("#cookies").style.display = "none";
+        })
+
+        // If number of cookies are zero in the browser it will display the pop up
+        cookieMessage = () => {
+            if (!getCookie("cookie")) {
+
+                document.querySelector("#cookies").style.display = "block";
+            }
+            // else {
+            //     document.querySelector("#cookies").style.display = "none";
+            // }
+        }
+
+        window.addEventListener("load", cookieMessage);
     </script>
+
 
 </body>
 
